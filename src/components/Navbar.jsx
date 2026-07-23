@@ -57,7 +57,7 @@ export default function Navbar() {
       <nav className="sticky top-0 w-full bg-surface/90 backdrop-blur-md z-50 shadow-[0px_20px_24px_-4px_rgba(19,27,46,0.08)]">
         <div className="flex justify-between items-center max-w-container-max mx-auto px-5 md:px-margin-desktop h-16 md:h-20">
           <Link to="/" className="flex items-center gap-2">
-            <img alt="SmileCare Dental Logo" className="h-8 md:h-10 w-auto" src={logo} />
+            <img alt="Shree Radhe Dental Hospital Logo" className="h-8 md:h-10 w-auto" src={logo} />
           </Link>
 
           {/* Desktop Nav links */}

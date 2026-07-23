@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const SERVICES_DATA = [
@@ -66,6 +66,9 @@ const SERVICES_DATA = [
 ];
 
 export default function Services() {
+  useEffect(() => {
+    document.title = 'Our Services | Shree Radhe Dental Hospital';
+  }, []);
   return (
     <div className="bg-background text-on-background font-body-md">
       {/* Hero / Header Section */}

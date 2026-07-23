@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import logo from '../assets/logo.svg';
 
 export default function Auth() {
+  useEffect(() => {
+    document.title = 'Sign In / Register | Shree Radhe Dental Hospital';
+  }, []);
   const navigate = useNavigate();
   const { login, register } = useAuth();
 
@@ -97,7 +100,7 @@ export default function Auth() {
         {/* Logo & branding */}
         <div className="text-center mb-8">
           <Link to="/">
-            <img src={logo} alt="SmileCare Logo" className="h-12 w-auto mx-auto mb-4" />
+            <img src={logo} alt="Shree Radhe Dental Hospital Logo" className="h-12 w-auto mx-auto mb-4" />
           </Link>
           <h1 className="text-headline-md font-headline-md text-on-surface">
             {tab === 'login' ? 'Welcome back' : 'Create your account'}
@@ -105,7 +108,7 @@ export default function Auth() {
           <p className="text-sm text-on-surface-variant mt-1">
             {tab === 'login'
               ? 'Sign in to view your appointments and profile.'
-              : 'Join SmileCare to manage your dental visits.'}
+              : 'Join Shree Radhe Dental Hospital to manage your dental visits.'}
           </p>
         </div>
 
@@ -385,7 +388,7 @@ export default function Auth() {
         <p className="text-center mt-6 text-xs text-on-surface-variant">
           <Link to="/" className="hover:text-primary transition-colors inline-flex items-center gap-1">
             <span className="material-symbols-outlined text-[14px]">arrow_back</span>
-            Back to SmileCare Home
+            Back to Shree Radhe Dental Hospital Home
           </Link>
         </p>
       </div>

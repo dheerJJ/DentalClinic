@@ -1,19 +1,19 @@
 // Local Storage Manager for SmileCare Clinic
 
 const DEFAULT_SETTINGS = {
-  clinicName: 'SmileCare Dental Clinic',
-  contactEmail: 'appointments@smilecare.com',
-  contactPhone: '+91-800-SMILE-CARE',
-  hours: 'Mon - Sat: 9:00 AM - 8:00 PM',
-  primaryColor: 'teal', // Options: 'teal', 'indigo', 'emerald', 'rose'
+  clinicName: 'Shree Radhe Dental Hospital',
+  contactEmail: 'srdhsmile@gmail.com',
+  contactPhone: '+91-6378556857',
+  hours: 'Mon - Fri: 8:00 AM - 6:00 PM',
+  primaryColor: 'gold', // Options: 'gold', 'teal', 'indigo', 'emerald', 'rose'
 };
 
 const DEFAULT_SERVICES = {
-  checkup: { id: 'checkup', title: 'Routine Checkup & Cleaning', cost: '$120.00', duration: '45 mins', priceVal: 120 },
-  whitening: { id: 'whitening', title: 'Teeth Whitening', cost: '$299.00', duration: '60 mins', priceVal: 299 },
-  emergency: { id: 'emergency', title: 'Emergency Dental Care', cost: '$150.00', duration: 'Immediate', priceVal: 150 },
-  orthodontics: { id: 'orthodontics', title: 'Orthodontic Consultation', cost: '$199.00', duration: '60 mins', priceVal: 199 },
-  implants: { id: 'implants', title: 'Dental Implants', cost: '$1,500.00', duration: '90 mins', priceVal: 1500 },
+  checkup: { id: 'checkup', title: 'Routine Checkup & Cleaning', cost: '₹500', duration: '45 mins', priceVal: 500 },
+  whitening: { id: 'whitening', title: 'Teeth Whitening', cost: '₹2,500', duration: '60 mins', priceVal: 2500 },
+  emergency: { id: 'emergency', title: 'Emergency Dental Care', cost: '₹1,000', duration: 'Immediate', priceVal: 1000 },
+  orthodontics: { id: 'orthodontics', title: 'Orthodontic Consultation', cost: '₹1,500', duration: '60 mins', priceVal: 1500 },
+  implants: { id: 'implants', title: 'Dental Implants', cost: '₹15,000', duration: '90 mins', priceVal: 15000 },
 };
 
 const DEFAULT_APPOINTMENTS = [
@@ -42,17 +42,17 @@ const isStorageAvailable = () => {
 export const initializeStorage = () => {
   if (!isStorageAvailable()) return;
 
-  if (!localStorage.getItem('smilecare_settings')) {
-    localStorage.setItem('smilecare_settings', JSON.stringify(DEFAULT_SETTINGS));
+  if (!localStorage.getItem('srdh_settings')) {
+    localStorage.setItem('srdh_settings', JSON.stringify(DEFAULT_SETTINGS));
   }
-  if (!localStorage.getItem('smilecare_services')) {
-    localStorage.setItem('smilecare_services', JSON.stringify(DEFAULT_SERVICES));
+  if (!localStorage.getItem('srdh_services')) {
+    localStorage.setItem('srdh_services', JSON.stringify(DEFAULT_SERVICES));
   }
-  if (!localStorage.getItem('smilecare_appointments')) {
-    localStorage.setItem('smilecare_appointments', JSON.stringify(DEFAULT_APPOINTMENTS));
+  if (!localStorage.getItem('srdh_appointments')) {
+    localStorage.setItem('srdh_appointments', JSON.stringify(DEFAULT_APPOINTMENTS));
   }
-  if (!localStorage.getItem('smilecare_patients')) {
-    localStorage.setItem('smilecare_patients', JSON.stringify(DEFAULT_PATIENTS));
+  if (!localStorage.getItem('srdh_patients')) {
+    localStorage.setItem('srdh_patients', JSON.stringify(DEFAULT_PATIENTS));
   }
 };
 
@@ -60,12 +60,12 @@ export const initializeStorage = () => {
 export const getSettings = () => {
   initializeStorage();
   if (!isStorageAvailable()) return DEFAULT_SETTINGS;
-  return JSON.parse(localStorage.getItem('smilecare_settings')) || DEFAULT_SETTINGS;
+  return JSON.parse(localStorage.getItem('srdh_settings')) || DEFAULT_SETTINGS;
 };
 
 export const saveSettings = (settings) => {
   if (!isStorageAvailable()) return;
-  localStorage.setItem('smilecare_settings', JSON.stringify(settings));
+  localStorage.setItem('srdh_settings', JSON.stringify(settings));
   // Apply theme color
   applyThemeColor(settings.primaryColor);
 };
@@ -74,24 +74,24 @@ export const saveSettings = (settings) => {
 export const getServices = () => {
   initializeStorage();
   if (!isStorageAvailable()) return DEFAULT_SERVICES;
-  return JSON.parse(localStorage.getItem('smilecare_services')) || DEFAULT_SERVICES;
+  return JSON.parse(localStorage.getItem('srdh_services')) || DEFAULT_SERVICES;
 };
 
 export const saveServices = (services) => {
   if (!isStorageAvailable()) return;
-  localStorage.setItem('smilecare_services', JSON.stringify(services));
+  localStorage.setItem('srdh_services', JSON.stringify(services));
 };
 
 // Appointments
 export const getAppointments = () => {
   initializeStorage();
   if (!isStorageAvailable()) return DEFAULT_APPOINTMENTS;
-  return JSON.parse(localStorage.getItem('smilecare_appointments')) || DEFAULT_APPOINTMENTS;
+  return JSON.parse(localStorage.getItem('srdh_appointments')) || DEFAULT_APPOINTMENTS;
 };
 
 export const saveAppointments = (appointments) => {
   if (!isStorageAvailable()) return;
-  localStorage.setItem('smilecare_appointments', JSON.stringify(appointments));
+  localStorage.setItem('srdh_appointments', JSON.stringify(appointments));
 };
 
 export const addAppointment = (appointment) => {
@@ -111,12 +111,12 @@ export const addAppointment = (appointment) => {
 export const getPatients = () => {
   initializeStorage();
   if (!isStorageAvailable()) return DEFAULT_PATIENTS;
-  return JSON.parse(localStorage.getItem('smilecare_patients')) || DEFAULT_PATIENTS;
+  return JSON.parse(localStorage.getItem('srdh_patients')) || DEFAULT_PATIENTS;
 };
 
 export const savePatients = (patients) => {
   if (!isStorageAvailable()) return;
-  localStorage.setItem('smilecare_patients', JSON.stringify(patients));
+  localStorage.setItem('srdh_patients', JSON.stringify(patients));
 };
 
 export const addPatient = (patient) => {
@@ -166,11 +166,16 @@ export const applyThemeColor = (color) => {
   if (typeof document === 'undefined') return;
   const root = document.documentElement;
   
-  let primaryColorHex = '#0d9488'; // teal default
-  let primaryContainerHex = '#008378';
-  let primaryFixedHex = '#89f5e7';
+  let primaryColorHex = '#cca82e'; // gold default
+  let primaryContainerHex = '#806518';
+  let primaryFixedHex = '#faf5e6';
   
   switch (color) {
+    case 'gold':
+      primaryColorHex = '#cca82e';
+      primaryContainerHex = '#806518';
+      primaryFixedHex = '#faf5e6';
+      break;
     case 'indigo':
       primaryColorHex = '#4f46e5';
       primaryContainerHex = '#3730a3';
@@ -188,9 +193,9 @@ export const applyThemeColor = (color) => {
       break;
     case 'teal':
     default:
-      primaryColorHex = '#0d9488';
-      primaryContainerHex = '#008378';
-      primaryFixedHex = '#89f5e7';
+      primaryColorHex = '#cca82e';
+      primaryContainerHex = '#806518';
+      primaryFixedHex = '#faf5e6';
       break;
   }
   

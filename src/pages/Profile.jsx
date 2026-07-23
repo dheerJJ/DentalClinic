@@ -14,6 +14,7 @@ export default function Profile() {
   const [rescheduleSuccess, setRescheduleSuccess] = useState(null);
 
   useEffect(() => {
+    document.title = 'My Profile | Shree Radhe Dental Hospital';
     // Only show appointments that belong to the logged-in user
     const all = getAppointments();
     const mine = user ? all.filter(
@@ -70,7 +71,7 @@ export default function Profile() {
         <div className="mb-10">
           <h1 className="text-2xl md:text-headline-lg font-headline-lg text-on-surface">My Profile</h1>
           <p className="text-body-md text-on-surface-variant mt-1">
-            Your personal account information and visit history at SmileCare.
+            Your personal account information and visit history at Shree Radhe Dental Hospital.
           </p>
         </div>
 
@@ -118,7 +119,7 @@ export default function Profile() {
               <label className="block text-xs font-bold text-on-surface-variant uppercase tracking-wider">Clinic</label>
               <div className="flex items-center gap-2 bg-surface border border-outline-variant rounded-xl px-4 py-3 min-w-0">
                 <span className="material-symbols-outlined text-on-surface-variant text-[16px] shrink-0">local_hospital</span>
-                <span className="text-sm truncate flex-1 min-w-0">{settings.clinicName || 'SmileCare Dental Clinic'}</span>
+                <span className="text-sm truncate flex-1 min-w-0">{settings.clinicName || 'Shree Radhe Dental Hospital'}</span>
               </div>
             </div>
           </div>
@@ -408,7 +409,7 @@ export default function Profile() {
               <span className="material-symbols-outlined text-primary">info</span>
               <div>
                 <p className="text-sm font-semibold group-hover:text-primary transition-colors">About Us</p>
-                <p className="text-xs text-on-surface-variant">Learn about SmileCare</p>
+                <p className="text-xs text-on-surface-variant">Learn about Shree Radhe</p>
               </div>
             </Link>
           </div>

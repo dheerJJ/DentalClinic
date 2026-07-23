@@ -79,20 +79,24 @@ function RevealOnScroll({ children, delayClass = '' }) {
 }
 
 export default function Home() {
+  useEffect(() => {
+    document.title = 'Shree Radhe Dental Hospital | Creating Beautiful Smiles Everyday!';
+  }, []);
+
   return (
-    <div className="bg-surface text-on-surface select-none overflow-x-hidden">
+    <div className="bg-background text-on-background select-none overflow-x-hidden">
       {/* Hero Section */}
       <header className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="max-w-container-max mx-auto px-5 md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10 py-12">
           <RevealOnScroll>
             <span className="inline-block px-4 py-1.5 bg-primary-fixed text-on-primary-fixed rounded-full font-label-md text-label-md mb-6 shadow-sm">
-              WORLD-CLASS DENTISTRY
+              GUMANMAL JI'S
             </span>
-            <h1 className="font-headline-xl text-2xl md:text-4xl text-on-surface leading-tight mb-6">
-              Crafting Confident Smiles with <span className="text-primary italic">Precision &amp; Care</span>
+            <h1 className="font-headline-xl text-2xl md:text-5xl text-on-background leading-tight mb-6">
+              Shree Radhe <span className="text-primary italic">Dental Hospital</span>
             </h1>
             <p className="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg">
-              Experience world-class dental treatments in a calming environment. Modern technology meets compassionate care for your entire family.
+              Creating Beautiful Smiles Everyday! Experience world-class dental treatments with state-of-the-art technology and compassionate care.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
@@ -102,8 +106,8 @@ export default function Home() {
                 Book Appointment
               </Link>
               <a
-                href="tel:+91800SMILE"
-                className="border-2 border-secondary text-secondary px-8 py-4 rounded-medical font-label-md text-label-md hover:bg-secondary-fixed transition-all duration-300 flex items-center gap-2 transform active:scale-95"
+                href="tel:+916378556857"
+                className="border-2 border-primary text-primary px-8 py-4 rounded-medical font-label-md text-label-md hover:bg-primary-fixed/20 transition-all duration-300 flex items-center gap-2 transform active:scale-95"
               >
                 <span className="material-symbols-outlined">call</span>
                 Call Now
@@ -113,14 +117,14 @@ export default function Home() {
 
           <RevealOnScroll delayClass="delay-200">
             <div className="relative">
-              <div className="aspect-[4/5] rounded-[24px] overflow-hidden shadow-2xl relative">
+              <div className="aspect-[4/5] rounded-[24px] overflow-hidden shadow-2xl relative border border-outline-variant/10">
                 <img
                   className="w-full h-full object-cover"
                   alt="Professional friendly female dentist smiling in clinic"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtf5PT4r0evp0jzTiM0gpkm-BNmndogrwvqqfGHomTJZrPmFjsPVOWFikUspH9dXBggzAsiOaqpvAfr7DZU59pgS7hiOVsDpMPGw6Hvzx_Hy30JjVCpVfKvkgi4csYolBaL1Q8cUFFyOaHNmBxWzU9i3jRIeWJQtvyGKfzhg8KFBEwaituZQPr4Ye1emiNnqRfGI8jFaFwUAevzwioHzK1oAZWs3K99HYH6eZejIzhDOcxxbVMc1E6XDO0EijH7sn1b6lKgA6Z5tM"
+                  src="src/assets/Dr.-RINKU-S.-KUMAWAT.png"
                 />
-                <div className="absolute bottom-8 left-8 right-8 glass-card p-6 rounded-card shadow-lg flex items-center gap-4 border border-white/20">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+                <div className="absolute bottom-8 left-8 right-8 glass-card p-6 rounded-card shadow-lg flex items-center gap-4">
+                  <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center text-primary border border-primary/30">
                     <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>
                       verified
                     </span>
@@ -139,19 +143,19 @@ export default function Home() {
       </header>
 
       {/* Statistics Section */}
-      <section className="py-section-gap bg-surface border-y border-outline-variant/10">
+      <section className="py-section-gap bg-background border-y border-outline-variant/10">
         <div className="max-w-container-max mx-auto px-5 md:px-margin-desktop">
           <RevealOnScroll>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-              <div className="text-center p-10 bg-white rounded-card shadow-[0px_20px_24px_-4px_rgba(19,27,46,0.04)] border border-outline-variant/30">
+              <div className="text-center p-10 bg-surface-container rounded-card shadow-lg border border-outline-variant/20">
                 <Counter target="15000" />
                 <p className="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Happy Patients</p>
               </div>
-              <div className="text-center p-10 bg-white rounded-card shadow-[0px_20px_24px_-4px_rgba(19,27,46,0.04)] border border-outline-variant/30">
+              <div className="text-center p-10 bg-surface-container rounded-card shadow-lg border border-outline-variant/20">
                 <Counter target="20" />
                 <p className="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Years Experience</p>
               </div>
-              <div className="text-center p-10 bg-white rounded-card shadow-[0px_20px_24px_-4px_rgba(19,27,46,0.04)] border border-outline-variant/30">
+              <div className="text-center p-10 bg-surface-container rounded-card shadow-lg border border-outline-variant/20">
                 <Counter target="50000" />
                 <p className="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Treatments Done</p>
               </div>
@@ -175,7 +179,7 @@ export default function Home() {
           <RevealOnScroll delayClass="delay-200">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
               {/* Service 1 */}
-              <div className="group bg-white p-8 rounded-card border border-outline-variant/20 hover:border-primary/40 hover:shadow-xl transition-all duration-500">
+              <div className="group bg-surface-container p-8 rounded-card border border-outline-variant/20 hover:border-primary/40 hover:shadow-xl transition-all duration-500">
                 <div className="w-16 h-16 bg-primary/10 rounded-medical flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
                   <span className="material-symbols-outlined text-[32px]">health_and_safety</span>
                 </div>
@@ -186,7 +190,7 @@ export default function Home() {
                 </Link>
               </div>
               {/* Service 2 */}
-              <div className="group bg-white p-8 rounded-card border border-outline-variant/20 hover:border-primary/40 hover:shadow-xl transition-all duration-500">
+              <div className="group bg-surface-container p-8 rounded-card border border-outline-variant/20 hover:border-primary/40 hover:shadow-xl transition-all duration-500">
                 <div className="w-16 h-16 bg-primary/10 rounded-medical flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
                   <span className="material-symbols-outlined text-[32px]">biotech</span>
                 </div>
@@ -197,7 +201,7 @@ export default function Home() {
                 </Link>
               </div>
               {/* Service 3 */}
-              <div className="group bg-white p-8 rounded-card border border-outline-variant/20 hover:border-primary/40 hover:shadow-xl transition-all duration-500">
+              <div className="group bg-surface-container p-8 rounded-card border border-outline-variant/20 hover:border-primary/40 hover:shadow-xl transition-all duration-500">
                 <div className="w-16 h-16 bg-primary/10 rounded-medical flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
                   <span className="material-symbols-outlined text-[32px]">dentistry</span>
                 </div>
@@ -208,7 +212,7 @@ export default function Home() {
                 </Link>
               </div>
               {/* Service 4 */}
-              <div className="group bg-white p-8 rounded-card border border-outline-variant/20 hover:border-primary/40 hover:shadow-xl transition-all duration-500">
+              <div className="group bg-surface-container p-8 rounded-card border border-outline-variant/20 hover:border-primary/40 hover:shadow-xl transition-all duration-500">
                 <div className="w-16 h-16 bg-primary/10 rounded-medical flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
                   <span className="material-symbols-outlined text-[32px]">orthopedics</span>
                 </div>
@@ -219,7 +223,7 @@ export default function Home() {
                 </Link>
               </div>
               {/* Service 5 */}
-              <div className="group bg-white p-8 rounded-card border border-outline-variant/20 hover:border-primary/40 hover:shadow-xl transition-all duration-500">
+              <div className="group bg-surface-container p-8 rounded-card border border-outline-variant/20 hover:border-primary/40 hover:shadow-xl transition-all duration-500">
                 <div className="w-16 h-16 bg-primary/10 rounded-medical flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
                   <span className="material-symbols-outlined text-[32px]">auto_awesome</span>
                 </div>
@@ -234,9 +238,9 @@ export default function Home() {
                 to="/services"
                 className="bg-primary flex flex-col items-center justify-center p-8 rounded-card text-center text-on-primary hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 active:scale-98"
               >
-                <h3 className="font-headline-md text-headline-md mb-2">And much more...</h3>
-                <p className="font-body-md text-body-md opacity-80 mb-6">Explore our full range of 20+ specialized dental treatments.</p>
-                <span className="material-symbols-outlined text-[48px]">clinical_notes</span>
+                <h3 className="font-headline-md text-headline-md mb-2 text-on-primary">And much more...</h3>
+                <p className="font-body-md text-body-md opacity-80 mb-6 text-on-primary">Explore our full range of 20+ specialized dental treatments.</p>
+                <span className="material-symbols-outlined text-[48px] text-on-primary">clinical_notes</span>
               </Link>
             </div>
           </RevealOnScroll>
@@ -244,16 +248,16 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-section-gap bg-surface overflow-hidden">
+      <section className="py-section-gap bg-background overflow-hidden">
         <div className="max-w-container-max mx-auto px-5 md:px-margin-desktop">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="lg:w-1/2">
               <RevealOnScroll>
-                <h2 className="font-headline-lg text-headline-lg text-on-surface mb-6">Why SmileCare is the Preferred Choice</h2>
+                <h2 className="font-headline-lg text-headline-lg text-on-surface mb-6">Why Shree Radhe is the Preferred Choice</h2>
                 <p className="font-body-md text-body-md text-on-surface-variant mb-10">We believe in a patient-first approach, combining clinical excellence with an environment that makes you feel at home.</p>
                 <div className="space-y-6">
-                  <div className="flex gap-6 p-6 rounded-card bg-white shadow-sm hover:shadow-md transition-all">
-                    <div className="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center text-secondary flex-shrink-0">
+                  <div className="flex gap-6 p-6 rounded-card bg-surface-container border border-outline-variant/20 shadow-sm hover:shadow-md transition-all">
+                    <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center text-primary flex-shrink-0">
                       <span className="material-symbols-outlined">groups</span>
                     </div>
                     <div>
@@ -261,8 +265,8 @@ export default function Home() {
                       <p className="font-caption text-caption text-on-surface-variant">Our team has over 20 years of combined clinical experience.</p>
                     </div>
                   </div>
-                  <div className="flex gap-6 p-6 rounded-card bg-white shadow-sm hover:shadow-md transition-all">
-                    <div className="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center text-secondary flex-shrink-0">
+                  <div className="flex gap-6 p-6 rounded-card bg-surface-container border border-outline-variant/20 shadow-sm hover:shadow-md transition-all">
+                    <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center text-primary flex-shrink-0">
                       <span className="material-symbols-outlined">precision_manufacturing</span>
                     </div>
                     <div>
@@ -270,8 +274,8 @@ export default function Home() {
                       <p className="font-caption text-caption text-on-surface-variant">We use 3D imaging and laser technology for painless procedures.</p>
                     </div>
                   </div>
-                  <div className="flex gap-6 p-6 rounded-card bg-white shadow-sm hover:shadow-md transition-all">
-                    <div className="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center text-secondary flex-shrink-0">
+                  <div className="flex gap-6 p-6 rounded-card bg-surface-container border border-outline-variant/20 shadow-sm hover:shadow-md transition-all">
+                    <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center text-primary flex-shrink-0">
                       <span className="material-symbols-outlined">payments</span>
                     </div>
                     <div>
@@ -287,7 +291,7 @@ export default function Home() {
               <RevealOnScroll delayClass="delay-200">
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-4 pt-12">
-                    <div className="rounded-card overflow-hidden h-64 shadow-md">
+                    <div className="rounded-card overflow-hidden h-64 shadow-md border border-outline-variant/10">
                       <img
                         className="w-full h-full object-cover"
                         alt="High tech dental operatory"
@@ -295,23 +299,23 @@ export default function Home() {
                       />
                     </div>
                     <div className="bg-primary p-4 sm:p-8 rounded-card text-on-primary shadow-lg">
-                      <p className="font-headline-md text-headline-md font-bold">24/7</p>
-                      <p className="font-caption text-caption opacity-80">Emergency Support</p>
+                      <p className="font-headline-md text-headline-md font-bold text-on-primary">24/7</p>
+                      <p className="font-caption text-caption opacity-80 text-on-primary">Emergency Support</p>
                     </div>
                   </div>
                   <div className="space-y-4">
-                    <div className="bg-secondary-container p-4 sm:p-8 rounded-card text-on-secondary-container shadow-lg">
-                      <p className="font-headline-md text-headline-md font-bold">5.0</p>
-                      <div className="flex flex-nowrap items-center gap-0.5 text-on-secondary-container mb-2">
+                    <div className="bg-primary-container p-4 sm:p-8 rounded-card text-on-primary-container shadow-lg border border-primary/20">
+                      <p className="font-headline-md text-headline-md font-bold text-on-primary-container">5.0</p>
+                      <div className="flex flex-nowrap items-center gap-0.5 text-primary mb-2">
                         {[1, 2, 3, 4, 5].map((s) => (
                           <span key={s} className="material-symbols-outlined text-xs sm:text-sm shrink-0" style={{ fontVariationSettings: "'FILL' 1" }}>
                             star
                           </span>
                         ))}
                       </div>
-                      <p className="font-caption text-caption">Google Rating</p>
+                      <p className="font-caption text-caption text-on-primary-container/85">Google Rating</p>
                     </div>
-                    <div className="rounded-card overflow-hidden h-80 shadow-md">
+                    <div className="rounded-card overflow-hidden h-80 shadow-md border border-outline-variant/10">
                       <img
                         className="w-full h-full object-cover"
                         alt="Dental clinic waiting area"
@@ -341,7 +345,7 @@ export default function Home() {
           <RevealOnScroll delayClass="delay-200">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
               {/* Testimonial 1 */}
-              <div className="bg-white p-8 rounded-card shadow-sm border border-outline-variant/10">
+              <div className="bg-surface-container p-8 rounded-card shadow-sm border border-outline-variant/20">
                 <div className="flex gap-1 text-primary mb-4">
                   {[1, 2, 3, 4, 5].map((s) => (
                     <span key={s} className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>
@@ -367,7 +371,7 @@ export default function Home() {
                 </div>
               </div>
               {/* Testimonial 2 */}
-              <div className="bg-white p-8 rounded-card shadow-sm border border-outline-variant/10">
+              <div className="bg-surface-container p-8 rounded-card shadow-sm border border-outline-variant/20">
                 <div className="flex gap-1 text-primary mb-4">
                   {[1, 2, 3, 4, 5].map((s) => (
                     <span key={s} className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>
@@ -393,7 +397,7 @@ export default function Home() {
                 </div>
               </div>
               {/* Testimonial 3 */}
-              <div className="bg-white p-8 rounded-card shadow-sm border border-outline-variant/10">
+              <div className="bg-surface-container p-8 rounded-card shadow-sm border border-outline-variant/20">
                 <div className="flex gap-1 text-primary mb-4">
                   {[1, 2, 3, 4, 5].map((s) => (
                     <span key={s} className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>
@@ -402,7 +406,7 @@ export default function Home() {
                   ))}
                 </div>
                 <p className="font-body-md text-body-md italic text-on-surface mb-8">
-                  "SmileCare fixed my alignment issues in just 6 months. I've never been more confident about my smile. Highly recommend to everyone!"
+                  "Shree Radhe fixed my alignment issues in just 6 months. I've never been more confident about my smile. Highly recommend to everyone!"
                 </p>
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full overflow-hidden border border-outline-variant/20">
@@ -424,10 +428,10 @@ export default function Home() {
       </section>
 
       {/* Appointment CTA Banner */}
-      <section className="py-section-gap">
+      <section className="py-section-gap bg-background">
         <div className="max-w-container-max mx-auto px-5 md:px-margin-desktop">
           <RevealOnScroll>
-            <div className="relative rounded-[32px] overflow-hidden p-6 md:p-12 lg:p-20 flex flex-col items-center text-center shadow-xl">
+            <div className="relative rounded-[32px] overflow-hidden p-6 md:p-12 lg:p-20 flex flex-col items-center text-center shadow-xl border border-outline-variant/20">
               {/* Background Image with Blur */}
               <div className="absolute inset-0 -z-10">
                 <img
@@ -435,9 +439,9 @@ export default function Home() {
                   alt="Luxury dental clinic reception area"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuAypiH_fervE5f2WfYkaAuGptUC6-VwHFvCU1wK8QTAWi64_uwNamSXIDDBg7Yb4pPFWAmM1WmhhqyhmiiLu-jAJa9U_-texEiG4IEhrrBtQhCC9g06Msdiu_C8-Qx8CMhJzcQ3DN77puSdQdI-3ZOnwBF6HRL5hST6rij_fuztPk1bYcat8EljCFmCsJlMZ74tn0d4CREI7cCz0YCWk8WMnJ0e53S40wfdEy0teB7sKIajzqLoPODlVNf3hAaS_6QUnCRzwxC9DUs"
                 />
-                <div className="absolute inset-0 bg-primary/80 mix-blend-multiply"></div>
+                <div className="absolute inset-0 bg-background/80 mix-blend-multiply"></div>
               </div>
-              <div className="relative z-10 glass-card p-6 md:p-10 lg:p-16 rounded-[24px] max-w-3xl border border-white/20 shadow-2xl">
+              <div className="relative z-10 glass-card p-6 md:p-10 lg:p-16 rounded-[24px] max-w-3xl">
                 <h2 className="font-headline-lg text-xl md:text-3xl text-on-surface mb-6">Ready for Your Perfect Smile?</h2>
                 <p className="font-body-lg text-body-lg text-on-surface-variant mb-10">
                   Schedule your consultation today and take the first step towards a healthier, brighter smile. We are accepting new patients!
@@ -451,14 +455,14 @@ export default function Home() {
                   </Link>
                   <Link
                     to="/services"
-                    className="bg-white text-primary border border-primary/20 px-10 py-4 rounded-medical font-label-md text-label-md hover:bg-surface-container-low transition-all transform active:scale-95"
+                    className="bg-surface-container text-primary border border-primary/20 px-10 py-4 rounded-medical font-label-md text-label-md hover:bg-surface-container-high transition-all transform active:scale-95"
                   >
                     View Pricing Plans
                   </Link>
                 </div>
                 <div className="mt-8 flex items-center justify-center gap-2 text-on-surface-variant font-caption text-caption">
                   <span className="material-symbols-outlined text-sm">schedule</span>
-                  Available: Mon - Sat, 9:00 AM - 8:00 PM
+                  Available: Mon - Fri, 8:00 AM - 6:00 PM
                 </div>
               </div>
             </div>

@@ -27,6 +27,7 @@ export default function Dashboard() {
 
   // Load state on mount
   useEffect(() => {
+    document.title = 'Patient Dashboard | Shree Radhe Dental Hospital';
     setAppointments(getAppointments());
     setSettings(getSettings());
     setServices(getServices());
@@ -111,7 +112,7 @@ export default function Dashboard() {
       >
         <div className="mb-10 px-2 py-4 cursor-pointer" onClick={() => navigate('/')}>
           <img
-            alt="SmileCare Dental Logo"
+            alt="Shree Radhe Dental Hospital Logo"
             className="h-10 w-auto object-contain hover:opacity-80 transition-opacity"
             src={logo}
             title="Go to Home"
@@ -174,7 +175,7 @@ export default function Dashboard() {
               </h1>
               <p className="text-xs text-on-surface-variant hidden sm:block">
                 {activeTab === 'My Appointments' && 'Track and manage your dental visits'}
-                {activeTab === 'Services' && 'Explore treatments available at SmileCare'}
+                {activeTab === 'Services' && 'Explore treatments available at Shree Radhe'}
                 {activeTab === 'My Profile' && 'Your personal account information'}
               </p>
             </div>
@@ -381,7 +382,7 @@ export default function Dashboard() {
             <div className="space-y-8 animate-fade-in max-w-2xl">
               <div>
                 <h2 className="font-headline-md text-headline-md text-on-surface mb-2">My Profile</h2>
-                <p className="text-body-md text-on-surface-variant">Your personal and contact information on file with SmileCare.</p>
+                <p className="text-body-md text-on-surface-variant">Your personal and contact information on file with Shree Radhe Dental Hospital.</p>
               </div>
 
               <div className="bg-surface-container-lowest p-6 md:p-8 rounded-2xl border border-outline-variant/20 shadow-sm">
@@ -425,7 +426,7 @@ export default function Dashboard() {
                     <label className="block text-xs font-bold text-on-surface-variant uppercase">Clinic</label>
                     <div className="flex items-center gap-2 bg-surface border border-outline-variant rounded-lg px-4 py-2.5">
                       <span className="material-symbols-outlined text-on-surface-variant text-[16px]">local_hospital</span>
-                      <span className="text-sm">{settings.clinicName || 'SmileCare Dental Clinic'}</span>
+                      <span className="text-sm">{settings.clinicName || 'Shree Radhe Dental Hospital'}</span>
                     </div>
                   </div>
                 </div>

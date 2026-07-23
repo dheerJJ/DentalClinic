@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ProtectedRoute from './components/ProtectedRoute';
@@ -11,6 +11,16 @@ import Profile from './pages/Profile';
 import Auth from './pages/Auth';
 import { AuthProvider } from './context/AuthContext';
 import { getSettings, applyThemeColor } from './utils/storage';
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 function Layout() {
   return (
@@ -46,6 +56,7 @@ export default function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <AuthProvider>
         <Layout />
       </AuthProvider>

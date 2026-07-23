@@ -19,6 +19,7 @@ export default function Booking() {
   });
 
   useEffect(() => {
+    document.title = 'Book Online | Shree Radhe Dental Hospital';
     setServices(getServices());
   }, []);
 
@@ -72,7 +73,7 @@ export default function Booking() {
     if (srv) {
       return { cost: srv.cost, duration: srv.duration };
     }
-    return { cost: 'Starts from $120.00', duration: 'Approx. 45-60 mins' };
+    return { cost: 'Starts from ₹500', duration: 'Approx. 45-60 mins' };
   };
 
   const serviceInfo = getServiceInfo();
@@ -109,7 +110,7 @@ export default function Booking() {
               {/* Step 1: Patient Information */}
               {step === 1 && (
                 <div className="step-transition">
-                  <h2 className="text-headline-lg font-headline-lg text-on-surface mb-2">Welcome to SmileCare</h2>
+                  <h2 className="text-headline-lg font-headline-lg text-on-surface mb-2">Welcome to Shree Radhe Dental Hospital</h2>
                   <p className="text-body-md text-on-surface-variant mb-8">Please provide your contact information to begin the booking process.</p>
                   <div className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -323,7 +324,7 @@ export default function Booking() {
           <aside className="lg:col-span-4 space-y-gutter">
             {/* Trust Badges */}
             <div className="bg-surface-container-low p-6 rounded-xl border border-outline-variant/30 space-y-6">
-              <h3 className="font-headline-md text-headline-md text-on-surface">Why SmileCare?</h3>
+              <h3 className="font-headline-md text-headline-md text-on-surface">Why Shree Radhe?</h3>
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
@@ -347,15 +348,15 @@ export default function Booking() {
             </div>
 
             {/* Emergency Hotline Banner */}
-            <div className="bg-inverse-surface text-white p-6 rounded-xl shadow-lg relative overflow-hidden group">
+            <div className="bg-inverse-surface text-inverse-on-surface p-6 rounded-xl shadow-lg relative overflow-hidden group">
               <div className="absolute -right-8 -top-8 w-32 h-32 bg-primary-container/20 rounded-full group-hover:scale-110 transition-transform duration-700"></div>
               <div className="relative z-10">
                 <span className="bg-error text-on-error px-2 py-0.5 rounded text-caption font-bold inline-block mb-3">24/7 SUPPORT</span>
-                <h3 className="text-headline-md font-headline-md mb-2 text-white">Emergency?</h3>
-                <p className="text-body-md text-surface-dim/90 mb-6">Need immediate dental care? Call our emergency hotline for instant assistance.</p>
-                <a className="inline-flex items-center gap-3 bg-primary-fixed text-on-primary-fixed px-6 py-3 rounded-lg font-bold hover:bg-white transition-colors w-full justify-center" href="tel:+91800SMILE">
+                <h3 className="text-headline-md font-headline-md mb-2 text-inverse-on-surface">Emergency?</h3>
+                <p className="text-body-md text-inverse-on-surface/90 mb-6">Need immediate dental care? Call our emergency hotline for instant assistance.</p>
+                <a className="inline-flex items-center gap-3 bg-primary text-on-primary px-6 py-3 rounded-lg font-bold hover:bg-primary-container transition-colors w-full justify-center" href="tel:+916378556857">
                   <span className="material-symbols-outlined">call</span>
-                  +91-800-SMILE-CARE
+                  +91-6378556857
                 </a>
               </div>
             </div>
@@ -365,7 +366,7 @@ export default function Booking() {
 
       {/* Success Overlay */}
       {showSuccess && (
-        <div className="fixed inset-0 bg-inverse-surface/40 backdrop-blur-sm z-[100] flex items-center justify-center p-4 transition-opacity duration-500">
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[100] flex items-center justify-center p-4 transition-opacity duration-500">
           <div className="bg-surface-container-lowest max-w-md w-full rounded-2xl p-6 md:p-10 text-center shadow-2xl">
             <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
               <span className="material-symbols-outlined text-primary text-[48px]" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>

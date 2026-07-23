@@ -1,12 +1,12 @@
 // ============================================================
-// SmileCare Auth Utility — localStorage-based user accounts
+// Shree Radhe Dental Hospital Auth Utility — localStorage-based user accounts
 // ============================================================
 
-const USERS_KEY = 'smilecare_users';
-const SESSION_KEY = 'smilecare_current_user';
+const USERS_KEY = 'srdh_users';
+const SESSION_KEY = 'srdh_current_user';
 
 // Simple encode — not cryptographic, suitable for demo/local use
-const encodePassword = (password) => btoa(password + '_smilecare_salt');
+const encodePassword = (password) => btoa(password + '_srdh_salt');
 
 // ── Read / Write helpers ──────────────────────────────────────
 
