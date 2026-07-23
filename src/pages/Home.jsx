@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import drRinku from '../assets/Dr.-RINKU-S.-KUMAWAT.png';
+import drRinku from '../assets/Dr-RINKU-S-KUMAWAT.png';
 import drRajesh from '../assets/dr_rajesh_iyer.png';
 import carouselXray from '../assets/carousel_xray.png';
 import carouselTreatment from '../assets/carousel_treatment.png';

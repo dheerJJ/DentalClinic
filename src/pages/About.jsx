@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import drPriyaSharma from '../assets/dr_priya_sharma.png';
 import drArjunMehta from '../assets/dr_arjun_mehta.png';
 import drRajeshIyer from '../assets/dr_rajesh_iyer.png';
+import drRinku from '../assets/Dr-RINKU-S-KUMAWAT.png';
 
 export default function About() {
   useEffect(() => {
@@ -57,7 +58,7 @@ export default function About() {
             <div className="relative">
               <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl border border-outline-variant/20">
                 <img
-                  src="src/assets/Dr.-RINKU-S.-KUMAWAT.png"
+                  src={drRinku}
                   alt="Shree Radhe founders"
                   className="w-full h-full object-cover"
                 />
