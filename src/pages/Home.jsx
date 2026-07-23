@@ -1,5 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import drRinku from '../assets/Dr.-RINKU-S.-KUMAWAT.png';
+import drRajesh from '../assets/dr_rajesh_iyer.png';
+import carouselXray from '../assets/carousel_xray.png';
+import carouselTreatment from '../assets/carousel_treatment.png';
+import carouselAligner from '../assets/carousel_aligner.png';
+import carouselCleaning from '../assets/carousel_cleaning.jpg';
 
 function Counter({ target }) {
   const [count, setCount] = useState(0);
@@ -78,68 +84,245 @@ function RevealOnScroll({ children, delayClass = '' }) {
   );
 }
 
+const slides = [
+  {
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDY5JfLMrMpy1D8rcODwctVGbrbAd2khaNeRr0xhgNDN8o5_x8K1ourVkhJNfE9dZkL1S-7QKvfTV30NMPVqYOkOgAc_OBu8lRhDH7SswtMTj9HFpRpEXmfR7Oo_KWd1ye_f9UDGCsMAVqbJLbKalrv1F8HueLrKx2kkv5Sm266GTI7U2um_7Jim88-KIKuGfYVHAg_BqYv88JV9Z-cock5166WkylkjzdT5v8_ABK8DiXTPWaT424niTu96xTIs6panjOKbZP3Zik',
+    tag: "GUMANMAL JI'S",
+    title: "Shree Radhe",
+    titlePrimary: "Dental Hospital",
+    description: "Creating Beautiful Smiles Everyday! Experience world-class dental treatments with state-of-the-art technology and compassionate care.",
+    primaryBtn: { text: "Book Appointment", to: "/booking" },
+    secondaryBtn: { text: "Call Now", href: "tel:+916378556857", isPhone: true },
+  },
+  {
+    image: carouselXray,
+    tag: "DIGITAL DIAGNOSTICS",
+    title: "Precision Imaging &",
+    titlePrimary: "X-Ray Diagnostics",
+    description: "Equipped with the latest high-definition digital radiology to diagnose oral issues accurately and create personalized treatment pathways.",
+    primaryBtn: { text: "Book Appointment", to: "/booking" },
+    secondaryBtn: { text: "Learn More", to: "/services" },
+  },
+  {
+    image: carouselTreatment,
+    tag: "CLINICAL EXCELLENCE",
+    title: "Gentle Dental &",
+    titlePrimary: "Pain-Free Procedures",
+    description: "Experience advanced therapies from expert specialists utilizing pain-free methods and compassionate, gentle techniques for all ages.",
+    primaryBtn: { text: "Our Services", to: "/services" },
+    secondaryBtn: { text: "Book Appointment", to: "/booking" },
+  },
+  {
+    image: carouselAligner,
+    tag: "COSMETIC DENTISTRY",
+    title: "Clear Invisible Orthodontic",
+    titlePrimary: "Aligners",
+    description: "Straighten your teeth comfortably and discreetly with custom-fit, clear, and removable aligners. Remodel your smile with confidence.",
+    primaryBtn: { text: "Book Appointment", to: "/booking" },
+    secondaryBtn: { text: "Explore Aligners", to: "/services" },
+  },
+  {
+    image: carouselCleaning,
+    tag: "PREVENTIVE HYGIENE",
+    title: "Artistry In Teeth",
+    titlePrimary: "Hygiene & Care",
+    description: "Preserve and maintain your oral health with expert teeth cleaning, scale-polishing, and complete protective treatments.",
+    primaryBtn: { text: "About Us", to: "/about" },
+    secondaryBtn: { text: "Book Appointment", to: "/booking" },
+  }
+];
+
 export default function Home() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [progress, setProgress] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleNext = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+    setProgress(0);
+  };
+
+  const handlePrev = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+    setProgress(0);
+  };
+
   useEffect(() => {
     document.title = 'Shree Radhe Dental Hospital | Creating Beautiful Smiles Everyday!';
   }, []);
 
+  useEffect(() => {
+    if (isHovered) return;
+
+    const timer = setInterval(() => {
+      setProgress((prev) => {
+        if (prev >= 100) {
+          setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
+          return 0;
+        }
+        return prev + 1;
+      });
+    }, 60); // 60ms * 100 steps = 6000ms (6 seconds)
+
+    return () => clearInterval(timer);
+  }, [isHovered]);
+
   return (
     <div className="bg-background text-on-background select-none overflow-x-hidden">
       {/* Hero Section */}
-      <header className="relative min-h-[90vh] flex items-center overflow-hidden">
-        <div className="max-w-container-max mx-auto px-5 md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10 py-12">
-          <RevealOnScroll>
-            <span className="inline-block px-4 py-1.5 bg-primary-fixed text-on-primary-fixed rounded-full font-label-md text-label-md mb-6 shadow-sm">
-              GUMANMAL JI'S
-            </span>
-            <h1 className="font-headline-xl text-2xl md:text-5xl text-on-background leading-tight mb-6">
-              Shree Radhe <span className="text-primary italic">Dental Hospital</span>
-            </h1>
-            <p className="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg">
-              Creating Beautiful Smiles Everyday! Experience world-class dental treatments with state-of-the-art technology and compassionate care.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link
-                to="/booking"
-                className="bg-primary text-on-primary px-8 py-4 rounded-medical font-label-md text-label-md hover:bg-primary-container hover:shadow-lg transition-all duration-300 transform active:scale-95"
-              >
-                Book Appointment
-              </Link>
-              <a
-                href="tel:+916378556857"
-                className="border-2 border-primary text-primary px-8 py-4 rounded-medical font-label-md text-label-md hover:bg-primary-fixed/20 transition-all duration-300 flex items-center gap-2 transform active:scale-95"
-              >
-                <span className="material-symbols-outlined">call</span>
-                Call Now
-              </a>
-            </div>
-          </RevealOnScroll>
-
-          <RevealOnScroll delayClass="delay-200">
-            <div className="relative">
-              <div className="aspect-[4/5] rounded-[24px] overflow-hidden shadow-2xl relative border border-outline-variant/10">
+      <header 
+        className="relative h-[90vh] min-h-[600px] flex items-center overflow-hidden bg-background group/hero"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        {/* Slides */}
+        {slides.map((slide, index) => {
+          const isActive = index === currentSlide;
+          return (
+            <div
+              key={index}
+              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+                isActive ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
+              }`}
+            >
+              {/* Background Image with Ken Burns */}
+              <div className="absolute inset-0 w-full h-full">
                 <img
-                  className="w-full h-full object-cover"
-                  alt="Professional friendly female dentist smiling in clinic"
-                  src="src/assets/Dr.-RINKU-S.-KUMAWAT.png"
+                  src={slide.image}
+                  alt={slide.title}
+                  className={`w-full h-full object-cover transition-transform duration-[6000ms] ease-out ${
+                    isActive ? 'scale-105 animate-kenburns' : 'scale-100'
+                  }`}
                 />
-                <div className="absolute bottom-8 left-8 right-8 glass-card p-6 rounded-card shadow-lg flex items-center gap-4">
-                  <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center text-primary border border-primary/30">
-                    <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>
-                      verified
-                    </span>
-                  </div>
-                  <div>
-                    <p className="font-label-md text-label-md text-on-surface">Certified Expertise</p>
-                    <p className="font-caption text-caption text-on-surface-variant">Top-rated dental professionals in the city.</p>
+                {/* Visual Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-transparent md:block hidden z-10" />
+                <div className="absolute inset-0 bg-background/80 md:hidden block z-10" />
+              </div>
+
+              {/* Slide Content Overlay */}
+              <div className="relative z-20 max-w-container-max mx-auto px-5 md:px-margin-desktop w-full h-full flex items-center">
+                <div className="max-w-2xl">
+                  {/* Badge */}
+                  <span
+                    className={`inline-block px-4 py-1.5 bg-primary-fixed text-on-primary-fixed rounded-full font-label-md text-label-md mb-6 shadow-sm transform transition-all duration-700 delay-100 ${
+                      isActive ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+                    }`}
+                  >
+                    {slide.tag}
+                  </span>
+
+                  {/* Title */}
+                  <h1
+                    className={`font-headline-xl text-3xl md:text-6xl text-on-background leading-tight mb-4 transform transition-all duration-700 delay-200 ${
+                      isActive ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+                    }`}
+                  >
+                    {slide.title} <span className="text-primary italic">{slide.titlePrimary}</span>
+                  </h1>
+
+                  {/* Description */}
+                  <p
+                    className={`font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg transform transition-all duration-700 delay-300 ${
+                      isActive ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+                    }`}
+                  >
+                    {slide.description}
+                  </p>
+
+                  {/* Buttons */}
+                  <div
+                    className={`flex flex-wrap gap-4 transform transition-all duration-700 delay-400 ${
+                      isActive ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+                    }`}
+                  >
+                    {/* Primary button */}
+                    {slide.primaryBtn.to ? (
+                      <Link
+                        to={slide.primaryBtn.to}
+                        className="bg-primary text-on-primary px-8 py-4 rounded-medical font-label-md text-label-md hover:bg-primary-container hover:shadow-lg transition-all duration-300 transform active:scale-95"
+                      >
+                        {slide.primaryBtn.text}
+                      </Link>
+                    ) : (
+                      <a
+                        href={slide.primaryBtn.href}
+                        className="bg-primary text-on-primary px-8 py-4 rounded-medical font-label-md text-label-md hover:bg-primary-container hover:shadow-lg transition-all duration-300 transform active:scale-95"
+                      >
+                        {slide.primaryBtn.text}
+                      </a>
+                    )}
+
+                    {/* Secondary button */}
+                    {slide.secondaryBtn.to ? (
+                      <Link
+                        to={slide.secondaryBtn.to}
+                        className="border-2 border-primary text-primary px-8 py-4 rounded-medical font-label-md text-label-md hover:bg-primary-fixed/20 transition-all duration-300 transform active:scale-95"
+                      >
+                        {slide.secondaryBtn.text}
+                      </Link>
+                    ) : (
+                      <a
+                        href={slide.secondaryBtn.href}
+                        className="border-2 border-primary text-primary px-8 py-4 rounded-medical font-label-md text-label-md hover:bg-primary-fixed/20 transition-all duration-300 flex items-center gap-2 transform active:scale-95"
+                      >
+                        {slide.secondaryBtn.isPhone && (
+                          <span className="material-symbols-outlined">call</span>
+                        )}
+                        {slide.secondaryBtn.text}
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
             </div>
-          </RevealOnScroll>
+          );
+        })}
+
+        {/* Progress bar at the bottom of the hero */}
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-surface-variant/20 z-30">
+          <div
+            className="h-full bg-primary transition-all duration-75 ease-linear"
+            style={{ width: `${progress}%` }}
+          />
         </div>
-        {/* Decorative Shapes */}
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-surface-container-low -z-10 rounded-l-[100px] hidden lg:block"></div>
+
+        {/* Left Arrow */}
+        <button
+          onClick={handlePrev}
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full border border-primary/20 bg-background/40 hover:bg-background/80 hover:border-primary text-primary flex items-center justify-center backdrop-blur-md opacity-0 group-hover/hero:opacity-100 transition-all duration-300 cursor-pointer shadow-lg"
+          aria-label="Previous slide"
+        >
+          <span className="material-symbols-outlined text-[28px]">chevron_left</span>
+        </button>
+
+        {/* Right Arrow */}
+        <button
+          onClick={handleNext}
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full border border-primary/20 bg-background/40 hover:bg-background/80 hover:border-primary text-primary flex items-center justify-center backdrop-blur-md opacity-0 group-hover/hero:opacity-100 transition-all duration-300 cursor-pointer shadow-lg"
+          aria-label="Next slide"
+        >
+          <span className="material-symbols-outlined text-[28px]">chevron_right</span>
+        </button>
+
+        {/* Dots Indicator */}
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 flex items-center gap-3">
+          {slides.map((_, index) => {
+            const isActive = index === currentSlide;
+            return (
+              <button
+                key={index}
+                onClick={() => {
+                  setCurrentSlide(index);
+                  setProgress(0);
+                }}
+                className={`h-2.5 rounded-full transition-all duration-500 cursor-pointer ${
+                  isActive ? 'w-8 bg-primary shadow-[0_0_10px_rgba(204,168,46,0.5)]' : 'w-2.5 bg-on-surface-variant/40 hover:bg-on-surface-variant'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            );
+          })}
+        </div>
       </header>
 
       {/* Statistics Section */}

@@ -366,21 +366,142 @@ export default function Booking() {
 
       {/* Success Overlay */}
       {showSuccess && (
-        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[100] flex items-center justify-center p-4 transition-opacity duration-500">
-          <div className="bg-surface-container-lowest max-w-md w-full rounded-2xl p-6 md:p-10 text-center shadow-2xl">
-            <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-              <span className="material-symbols-outlined text-primary text-[48px]" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>
+        <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-[100] flex items-center justify-center p-4 transition-opacity duration-500 overflow-y-auto">
+          <div className="bg-surface-container-lowest max-w-3xl w-full rounded-2xl p-6 md:p-8 shadow-2xl border border-outline-variant/30 my-8">
+            <div className="flex flex-col items-center text-center mb-6">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                <span className="material-symbols-outlined text-primary text-[36px]" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>
+              </div>
+              <h2 className="text-headline-lg font-headline-lg text-on-surface">Appointment Confirmed!</h2>
+              <p className="text-body-md text-on-surface-variant max-w-lg mt-2">
+                Your appointment is scheduled for <span className="font-bold text-on-surface">Oct {formData.date}, 2024</span> at <span className="font-bold text-on-surface">{formData.time}</span>.
+              </p>
             </div>
-            <h2 className="text-headline-xl font-headline-xl text-on-surface mb-4">Confirmed!</h2>
-            <p className="text-body-lg text-body-lg text-on-surface-variant mb-8">
-              Your appointment is scheduled for Oct {formData.date}, 2024 at {formData.time}. A confirmation has been sent to {formData.email}.
-            </p>
-            <button
-              onClick={() => navigate('/profile')}
-              className="w-full bg-primary text-on-primary py-4 rounded-xl font-headline-md hover:opacity-90 transition-all cursor-pointer"
-            >
-              View My Appointments
-            </button>
+
+            {/* Notification logs simulation panel */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 pt-6 border-t border-outline-variant/20">
+              {/* Patient notifications */}
+              <div className="bg-surface-container-low p-5 rounded-xl border border-outline-variant/20 space-y-4">
+                <div className="flex items-center gap-2 text-primary font-bold">
+                  <span className="material-symbols-outlined text-[20px]">person</span>
+                  <span className="text-label-md">Patient Notifications</span>
+                </div>
+                
+                {/* Patient Email */}
+                <div className="space-y-1">
+                  <div className="flex justify-between items-center text-caption font-semibold">
+                    <span className="text-on-surface-variant flex items-center gap-1">
+                      <span className="material-symbols-outlined text-[14px]">mail</span>
+                      Email to Patient
+                    </span>
+                    <span className="text-[#25D366] bg-[#25D366]/10 px-1.5 py-0.5 rounded text-[10px] flex items-center gap-0.5 font-bold">
+                      <span className="material-symbols-outlined text-[10px]" style={{ fontVariationSettings: "'FILL' 1" }}>check</span>
+                      SENT
+                    </span>
+                  </div>
+                  <div className="p-3 bg-surface rounded-lg border border-outline-variant/30 text-caption font-mono text-left max-h-[100px] overflow-y-auto overflow-x-hidden break-all">
+                    <p className="font-bold">To: {formData.email}</p>
+                    <p className="font-bold text-primary mt-1">Subject: Booking Confirmed - Shree Radhe</p>
+                    <p className="text-on-surface-variant mt-1.5 whitespace-pre-line">
+                      Dear {formData.name}, your appointment for {services[formData.service]?.title || 'Dental Treatment'} is confirmed on Oct {formData.date}, 2024 at {formData.time}. Thank you for choosing Shree Radhe Dental Hospital.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Patient WhatsApp */}
+                <div className="space-y-1">
+                  <div className="flex justify-between items-center text-caption font-semibold">
+                    <span className="text-on-surface-variant flex items-center gap-1">
+                      <span className="material-symbols-outlined text-[14px]">chat</span>
+                      WhatsApp to Patient
+                    </span>
+                    <span className="text-[#25D366] bg-[#25D366]/10 px-1.5 py-0.5 rounded text-[10px] flex items-center gap-0.5 font-bold">
+                      <span className="material-symbols-outlined text-[10px]" style={{ fontVariationSettings: "'FILL' 1" }}>check</span>
+                      SENT
+                    </span>
+                  </div>
+                  <div className="p-3 bg-surface rounded-lg border border-[#25D366]/20 text-caption font-mono text-left max-h-[100px] overflow-y-auto overflow-x-hidden break-all bg-[#25D366]/5">
+                    <p className="font-bold text-[#25D366]">To: {formData.phone}</p>
+                    <p className="text-on-surface-variant mt-1 whitespace-pre-line">
+                      Hello *{formData.name}*! Your appointment at *Shree Radhe Dental Hospital* is confirmed. 
+                      📅 Date: Oct {formData.date}, 2024
+                      ⏰ Time: {formData.time}
+                      🩺 Service: {services[formData.service]?.title || 'Dental Treatment'}
+                      
+                      Please arrive 10 minutes early. See you!
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Doctor notifications */}
+              <div className="bg-surface-container-low p-5 rounded-xl border border-outline-variant/20 space-y-4">
+                <div className="flex items-center gap-2 text-primary font-bold">
+                  <span className="material-symbols-outlined text-[20px]">medical_services</span>
+                  <span className="text-label-md">Doctor Alerts (Hotline)</span>
+                </div>
+                
+                {/* Doctor Email */}
+                <div className="space-y-1">
+                  <div className="flex justify-between items-center text-caption font-semibold">
+                    <span className="text-on-surface-variant flex items-center gap-1">
+                      <span className="material-symbols-outlined text-[14px]">mail</span>
+                      Email to Doctor
+                    </span>
+                    <span className="text-[#25D366] bg-[#25D366]/10 px-1.5 py-0.5 rounded text-[10px] flex items-center gap-0.5 font-bold">
+                      <span className="material-symbols-outlined text-[10px]" style={{ fontVariationSettings: "'FILL' 1" }}>check</span>
+                      SENT
+                    </span>
+                  </div>
+                  <div className="p-3 bg-surface rounded-lg border border-outline-variant/30 text-caption font-mono text-left max-h-[100px] overflow-y-auto overflow-x-hidden break-all">
+                    <p className="font-bold">To: rinku.kumawat@shreeradhedental.com</p>
+                    <p className="font-bold text-primary mt-1">Subject: ALERT: New Appointment - {formData.name}</p>
+                    <p className="text-on-surface-variant mt-1.5 whitespace-pre-line">
+                      Dr. Rinku, a new appointment has been scheduled.
+                      Patient: {formData.name}
+                      Phone: {formData.phone}
+                      Email: {formData.email}
+                      Service: {services[formData.service]?.title || 'Dental Treatment'}
+                      Scheduled: Oct {formData.date}, 2024 at {formData.time}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Doctor WhatsApp */}
+                <div className="space-y-1">
+                  <div className="flex justify-between items-center text-caption font-semibold">
+                    <span className="text-on-surface-variant flex items-center gap-1">
+                      <span className="material-symbols-outlined text-[14px]">chat</span>
+                      WhatsApp to Doctor
+                    </span>
+                    <span className="text-[#25D366] bg-[#25D366]/10 px-1.5 py-0.5 rounded text-[10px] flex items-center gap-0.5 font-bold">
+                      <span className="material-symbols-outlined text-[10px]" style={{ fontVariationSettings: "'FILL' 1" }}>check</span>
+                      SENT
+                    </span>
+                  </div>
+                  <div className="p-3 bg-surface rounded-lg border border-[#25D366]/20 text-caption font-mono text-left max-h-[100px] overflow-y-auto overflow-x-hidden break-all bg-[#25D366]/5">
+                    <p className="font-bold text-[#25D366]">To: +91 63785 56857 (Dr. Rinku)</p>
+                    <p className="text-on-surface-variant mt-1 whitespace-pre-line">
+                      *New Booking Alert* 🚨
+                      Patient: *{formData.name}* ({formData.phone})
+                      Service: {services[formData.service]?.title || 'Dental Treatment'}
+                      Date: Oct {formData.date}, 2024
+                      Time: {formData.time}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Bottom Actions */}
+            <div className="mt-8 flex justify-center">
+              <button
+                onClick={() => navigate('/profile')}
+                className="bg-primary text-on-primary px-8 py-4 rounded-xl font-headline-md hover:bg-primary-container hover:shadow-lg transition-all active:scale-95 cursor-pointer max-w-sm w-full"
+              >
+                View My Appointments
+              </button>
+            </div>
           </div>
         </div>
       )}
