@@ -82,7 +82,7 @@ export default function Footer() {
             </li>
             <li className="flex gap-3">
               <span className="material-symbols-outlined text-primary">schedule</span>
-              <span>Mon - Fri: 8:00 AM - 6:00 PM</span>
+              <span>Mon - Sun: 8:00 AM - 6:00 PM</span>
             </li>
           </ul>
         </div>
