@@ -5,7 +5,7 @@ const DEFAULT_SETTINGS = {
   contactEmail: 'srdhsmile@gmail.com',
   contactPhone: '+91-6378556857',
   hours: 'Mon - Fri: 8:00 AM - 6:00 PM',
-  primaryColor: 'gold', // Options: 'gold', 'teal', 'indigo', 'emerald', 'rose'
+  primaryColor: 'teal', // Options: 'teal', 'navy', 'indigo', 'emerald', 'rose'
 };
 
 const DEFAULT_SERVICES = {
@@ -166,15 +166,15 @@ export const applyThemeColor = (color) => {
   if (typeof document === 'undefined') return;
   const root = document.documentElement;
   
-  let primaryColorHex = '#cca82e'; // gold default
-  let primaryContainerHex = '#806518';
-  let primaryFixedHex = '#faf5e6';
+  let primaryColorHex = '#0eab9f'; // logo teal default
+  let primaryContainerHex = '#004d47';
+  let primaryFixedHex = '#e6f8f6';
   
   switch (color) {
-    case 'gold':
-      primaryColorHex = '#cca82e';
-      primaryContainerHex = '#806518';
-      primaryFixedHex = '#faf5e6';
+    case 'navy':
+      primaryColorHex = '#0f3885';
+      primaryContainerHex = '#1e40af';
+      primaryFixedHex = '#dbeafe';
       break;
     case 'indigo':
       primaryColorHex = '#4f46e5';
@@ -193,9 +193,9 @@ export const applyThemeColor = (color) => {
       break;
     case 'teal':
     default:
-      primaryColorHex = '#cca82e';
-      primaryContainerHex = '#806518';
-      primaryFixedHex = '#faf5e6';
+      primaryColorHex = '#0eab9f';
+      primaryContainerHex = '#004d47';
+      primaryFixedHex = '#e6f8f6';
       break;
   }
   

@@ -56,8 +56,8 @@ export default function Navbar() {
     <>
       <nav className="sticky top-0 w-full bg-surface/90 backdrop-blur-md z-50 shadow-[0px_20px_24px_-4px_rgba(19,27,46,0.08)]">
         <div className="flex justify-between items-center max-w-container-max mx-auto px-5 md:px-margin-desktop h-16 md:h-20">
-          <Link to="/" className="flex items-center gap-2">
-            <img alt="Shree Radhe Dental Hospital Logo" className="h-8 md:h-10 w-auto" src={logo} />
+          <Link to="/" className="flex items-center gap-2 px-2.5 py-1 bg-transparent/95 hover:bg-white rounded-xl shadow-sm transition-all duration-300">
+            <img alt="Shree Radhe Dental Hospital Logo" className="h-8 md:h-10 w-auto object-contain" src={logo} />
           </Link>
 
           {/* Desktop Nav links */}
@@ -164,17 +164,15 @@ export default function Navbar() {
 
       {/* Mobile menu backdrop overlay */}
       <div
-        className={`fixed inset-x-0 bottom-0 top-16 z-40 bg-on-surface/30 backdrop-blur-sm md:hidden transition-all duration-300 ${
-          mobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
-        }`}
+        className={`fixed inset-x-0 bottom-0 top-16 z-40 bg-on-surface/30 backdrop-blur-sm md:hidden transition-all duration-300 ${mobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+          }`}
         onClick={() => setMobileMenuOpen(false)}
       />
 
       {/* Mobile menu drawer */}
       <div
-        className={`fixed top-16 right-0 bottom-0 z-50 w-72 bg-surface shadow-[0px_20px_40px_-8px_rgba(19,27,46,0.15)] md:hidden transform transition-all duration-300 ease-in-out border-l border-outline-variant/10 flex flex-col ${
-          mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
-        }`}
+        className={`fixed top-16 right-0 bottom-0 z-50 w-72 bg-surface shadow-[0px_20px_40px_-8px_rgba(19,27,46,0.15)] md:hidden transform transition-all duration-300 ease-in-out border-l border-outline-variant/10 flex flex-col ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+          }`}
       >
         {/* Drawer Content */}
         <div className="flex-grow overflow-y-auto px-5 py-6 space-y-6">
@@ -198,11 +196,10 @@ export default function Navbar() {
                 key={link.to}
                 to={link.to}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`flex items-center gap-3 px-4 py-3 rounded-xl font-label-md text-sm transition-all ${
-                  link.active
+                className={`flex items-center gap-3 px-4 py-3 rounded-xl font-label-md text-sm transition-all ${link.active
                     ? 'bg-primary/10 text-primary'
                     : 'text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface'
-                }`}
+                  }`}
               >
                 {link.label}
               </Link>

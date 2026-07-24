@@ -99,8 +99,8 @@ export default function Auth() {
 
         {/* Logo & branding */}
         <div className="text-center mb-8">
-          <Link to="/">
-            <img src={logo} alt="Shree Radhe Dental Hospital Logo" className="h-12 w-auto mx-auto mb-4" />
+          <Link to="/" className="inline-block px-3 py-1.5 bg-white/95 rounded-xl shadow-sm mb-4 hover:bg-white transition-all">
+            <img src={logo} alt="Shree Radhe Dental Hospital Logo" className="h-12 w-auto mx-auto object-contain" />
           </Link>
           <h1 className="text-headline-md font-headline-md text-on-surface">
             {tab === 'login' ? 'Welcome back' : 'Create your account'}

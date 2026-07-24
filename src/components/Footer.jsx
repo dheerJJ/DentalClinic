@@ -7,8 +7,8 @@ export default function Footer() {
     <footer className="w-full py-16 bg-surface-container-low text-on-surface-variant border-t border-outline-variant/20">
       <div className="max-w-container-max mx-auto px-5 md:px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
         <div className="space-y-6">
-          <div className="flex items-center gap-2">
-            <img alt="Shree Radhe Dental Hospital Logo" className="h-10 w-auto" src={logo} />
+          <div className="flex items-center gap-2 px-3 py-1.5 bg-transparent/95 rounded-xl w-fit shadow-sm">
+            <img alt="Shree Radhe Dental Hospital Logo" className="h-10 w-auto object-contain" src={logo} />
           </div>
           <p className="font-body-md text-body-md text-on-surface-variant/75 leading-relaxed">
             World-class dental treatments in a calming environment. Modern technology meets compassionate care for your entire family.

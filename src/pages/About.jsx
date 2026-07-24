@@ -30,7 +30,7 @@ export default function About() {
             </span>
             <h1 className="font-headline-xl text-3xl sm:text-4xl lg:text-5xl leading-tight text-on-background mb-6">
               Compassionate Care Meets{' '}
-              <span className="text-primary italic">Clinical Excellence.</span>
+              <span className="text-gradient-logo italic">Clinical Excellence.</span>
             </h1>
             <p className="text-base md:text-lg leading-relaxed text-on-background/80 mb-8 max-w-[480px]">
               We believe a visit to the dentist should be a highlight of your day. Our mission is to combine the latest dental technology with a gentle, patient-first approach.

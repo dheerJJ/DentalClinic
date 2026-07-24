@@ -110,10 +110,10 @@ export default function Dashboard() {
           lg:translate-x-0 lg:static lg:z-auto lg:shrink-0
         `}
       >
-        <div className="mb-10 px-2 py-4 cursor-pointer" onClick={() => navigate('/')}>
+        <div className="mb-10 px-3 py-2 bg-white/95 rounded-xl shadow-sm cursor-pointer hover:bg-white transition-all w-fit" onClick={() => navigate('/')}>
           <img
             alt="Shree Radhe Dental Hospital Logo"
-            className="h-10 w-auto object-contain hover:opacity-80 transition-opacity"
+            className="h-10 w-auto object-contain transition-opacity"
             src={logo}
             title="Go to Home"
           />

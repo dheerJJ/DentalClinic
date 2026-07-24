@@ -217,7 +217,7 @@ export default function Home() {
                       isActive ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
                     }`}
                   >
-                    {slide.title} <span className="text-primary italic">{slide.titlePrimary}</span>
+                    {slide.title} <span className="text-gradient-logo italic">{slide.titlePrimary}</span>
                   </h1>
 
                   {/* Description */}

@@ -1,59 +1,59 @@
 @import "tailwindcss";
 
 @theme {
-  /* Colors */
-  --color-primary: #cca82e;
-  --color-primary-container: #806518;
-  --color-primary-fixed: #faf5e6;
-  --color-primary-fixed-dim: #e5c986;
-  --color-on-primary: #000000;
-  --color-on-primary-container: #faf6e8;
-  --color-on-primary-fixed: #201a04;
-  --color-on-primary-fixed-variant: #50410a;
+  /* Colors - Matched to Shree Radhe Dental Hospital Logo (Teal & Deep Navy) */
+  --color-primary: #0eab9f;
+  --color-primary-container: #004d47;
+  --color-primary-fixed: #e6f8f6;
+  --color-primary-fixed-dim: #5eead4;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #ccfbf1;
+  --color-on-primary-fixed: #002b28;
+  --color-on-primary-fixed-variant: #005b54;
 
-  --color-secondary: #b89047;
-  --color-secondary-container: #8c672b;
-  --color-secondary-fixed: #f7edd8;
-  --color-secondary-fixed-dim: #dec08d;
-  --color-on-secondary: #000000;
-  --color-on-secondary-container: #332104;
-  --color-on-secondary-fixed: #261702;
-  --color-on-secondary-fixed-variant: #573a07;
+  --color-secondary: #0f3885;
+  --color-secondary-container: #1e40af;
+  --color-secondary-fixed: #dbeafe;
+  --color-secondary-fixed-dim: #93c5fd;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #e0e7ff;
+  --color-on-secondary-fixed: #0f172a;
+  --color-on-secondary-fixed-variant: #1e3a8a;
 
-  --color-tertiary: #b0a58d;
-  --color-tertiary-container: #7a705a;
-  --color-tertiary-fixed: #fcfaf7;
-  --color-tertiary-fixed-dim: #d4ccb8;
-  --color-on-tertiary: #000000;
-  --color-on-tertiary-container: #262114;
-  --color-on-tertiary-fixed: #1e1b10;
-  --color-on-tertiary-fixed-variant: #494435;
+  --color-tertiary: #0284c7;
+  --color-tertiary-container: #0369a1;
+  --color-tertiary-fixed: #e0f2fe;
+  --color-tertiary-fixed-dim: #7dd3fc;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-container: #e0f2fe;
+  --color-on-tertiary-fixed: #082f49;
+  --color-on-tertiary-fixed-variant: #0c4a6e;
 
-  --color-surface: #1b1b1a;
-  --color-surface-dim: #151514;
-  --color-surface-bright: #262624;
-  --color-surface-container-lowest: #181817;
-  --color-surface-container-low: #1f1f1e;
-  --color-surface-container: #262624;
-  --color-surface-container-high: #2e2e2c;
-  --color-surface-container-highest: #3a3a37;
-  --color-on-surface: #f5efe0;
-  --color-on-surface-variant: #aba596;
-  --color-inverse-surface: #f5efe0;
-  --color-inverse-on-surface: #111110;
+  --color-surface: #0b1326;
+  --color-surface-dim: #070c18;
+  --color-surface-bright: #121d38;
+  --color-surface-container-lowest: #060a14;
+  --color-surface-container-low: #0e172e;
+  --color-surface-container: #121d38;
+  --color-surface-container-high: #172648;
+  --color-surface-container-highest: #1d305a;
+  --color-on-surface: #f0f6fc;
+  --color-on-surface-variant: #94a3b8;
+  --color-inverse-surface: #f0f6fc;
+  --color-inverse-on-surface: #0b1326;
   
-  --color-outline: #575245;
-  --color-outline-variant: #333028;
-  --color-surface-tint: #cca82e;
+  --color-outline: #1e293b;
+  --color-outline-variant: #172648;
+  --color-surface-tint: #0eab9f;
   
-  --color-error: #ffb4ab;
-  --color-error-container: #93000a;
-  --color-on-error: #690005;
-  --color-on-error-container: #ffdad6;
+  --color-error: #f87171;
+  --color-error-container: #7f1d1d;
+  --color-on-error: #ffffff;
+  --color-on-error-container: #fecaca;
   
-  --color-background: #151514;
-  --color-on-background: #f5efe0;
-  --color-surface-variant: #333028;
+  --color-background: #070c18;
+  --color-on-background: #f0f6fc;
+  --color-surface-variant: #172648;
 
   /* Spacing overrides or custom extensions */
   --spacing-section-gap: 80px;
@@ -144,14 +144,36 @@
     transform: translateY(0);
 }
 .glass-card {
-    background: rgba(18, 17, 15, 0.75);
-    border: 1px solid rgba(204, 168, 46, 0.1);
+    background: rgba(14, 23, 46, 0.75);
+    border: 1px solid rgba(14, 171, 159, 0.18);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
 }
 .text-glow {
-    text-shadow: 0 0 20px rgba(204, 168, 46, 0.35);
+    text-shadow: 0 0 20px rgba(14, 171, 159, 0.35);
 }
+
+/* Custom Text Palette matched to Shree Radhe Dental Hospital Logo */
+.text-logo-navy {
+  color: #0f3885;
+}
+.text-logo-teal {
+  color: #0eab9f;
+}
+.text-logo-slate {
+  color: #8199b0;
+}
+.text-gradient-logo {
+  background: linear-gradient(135deg, #0eab9f 0%, #38bdf8 60%, #60a5fa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.text-gradient-navy-teal {
+  background: linear-gradient(90deg, #60a5fa 0%, #0eab9f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .bento-grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -164,7 +186,7 @@
     }
 }
 .custom-scrollbar::-webkit-scrollbar { width: 4px; }
-.custom-scrollbar::-webkit-scrollbar-thumb { background: #575245; border-radius: 10px; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: #172648; border-radius: 10px; }
 
 /* Carousel Custom Animations */
 @keyframes kenburns {

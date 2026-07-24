@@ -86,7 +86,7 @@ export default function Services() {
             </ol>
           </nav>
           <div className="max-w-3xl">
-            <h1 className="font-headline-xl text-2xl md:text-headline-xl text-on-surface mb-4">Our Premium Dental Services</h1>
+            <h1 className="font-headline-xl text-2xl md:text-headline-xl text-on-surface mb-4">Our Premium <span className="text-gradient-logo">Dental Services</span></h1>
             <p className="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
               Experience world-class dental care combining advanced clinical technology with an empathetic approach to your comfort. Our specialists offer a comprehensive suite of treatments tailored to your unique smile journey.
             </p>
