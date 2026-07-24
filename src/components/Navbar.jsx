@@ -56,7 +56,7 @@ export default function Navbar() {
     <>
       <nav className="sticky top-0 w-full bg-surface/90 backdrop-blur-md z-50 shadow-[0px_20px_24px_-4px_rgba(19,27,46,0.08)]">
         <div className="flex justify-between items-center max-w-container-max mx-auto px-5 md:px-margin-desktop h-16 md:h-20">
-          <Link to="/" className="flex items-center gap-2 px-2.5 py-1 bg-transparent/95 hover:bg-white rounded-xl shadow-sm transition-all duration-300">
+          <Link to="/" className="flex items-center gap-2 px-2.5 py-1 bg-white/95 hover:bg-white rounded-xl shadow-sm transition-all duration-300">
             <img alt="Shree Radhe Dental Hospital Logo" className="h-8 md:h-10 w-auto object-contain" src={logo} />
           </Link>
 
@@ -197,8 +197,8 @@ export default function Navbar() {
                 to={link.to}
                 onClick={() => setMobileMenuOpen(false)}
                 className={`flex items-center gap-3 px-4 py-3 rounded-xl font-label-md text-sm transition-all ${link.active
-                    ? 'bg-primary/10 text-primary'
-                    : 'text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface'
+                  ? 'bg-primary/10 text-primary'
+                  : 'text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface'
                   }`}
               >
                 {link.label}

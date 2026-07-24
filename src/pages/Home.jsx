@@ -176,7 +176,7 @@ export default function Home() {
   return (
     <div className="bg-background text-on-background select-none overflow-x-hidden">
       {/* Hero Section */}
-      <header 
+      <header
         className="relative h-[90vh] min-h-[600px] flex items-center overflow-hidden bg-background group/hero"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
@@ -187,18 +187,16 @@ export default function Home() {
           return (
             <div
               key={index}
-              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-                isActive ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
-              }`}
+              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${isActive ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
+                }`}
             >
               {/* Background Image with Ken Burns */}
               <div className="absolute inset-0 w-full h-full">
                 <img
                   src={slide.image}
                   alt={slide.title}
-                  className={`w-full h-full object-cover transition-transform duration-[6000ms] ease-out ${
-                    isActive ? 'scale-105 animate-kenburns' : 'scale-100'
-                  }`}
+                  className={`w-full h-full object-cover transition-transform duration-[6000ms] ease-out ${isActive ? 'scale-105 animate-kenburns' : 'scale-100'
+                    }`}
                 />
                 {/* Visual Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-transparent md:block hidden z-10" />
@@ -210,36 +208,32 @@ export default function Home() {
                 <div className="max-w-2xl">
                   {/* Badge */}
                   <span
-                    className={`inline-block px-4 py-1.5 bg-primary-fixed text-on-primary-fixed rounded-full font-label-md text-label-md mb-6 shadow-sm transform transition-all duration-700 delay-100 ${
-                      isActive ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-                    }`}
+                    className={`inline-block px-4 py-1.5 bg-primary-fixed text-on-primary-fixed rounded-full font-label-md text-label-md mb-6 shadow-sm transform transition-all duration-700 delay-100 ${isActive ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+                      }`}
                   >
                     {slide.tag}
                   </span>
 
                   {/* Title */}
                   <h1
-                    className={`font-headline-xl text-3xl md:text-6xl text-on-background leading-tight mb-4 transform transition-all duration-700 delay-200 ${
-                      isActive ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-                    }`}
+                    className={`font-headline-xl text-3xl md:text-6xl text-on-background leading-tight mb-4 transform transition-all duration-700 delay-200 ${isActive ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+                      }`}
                   >
                     {slide.title} <span className="text-gradient-logo italic">{slide.titlePrimary}</span>
                   </h1>
 
                   {/* Description */}
                   <p
-                    className={`font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg transform transition-all duration-700 delay-300 ${
-                      isActive ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-                    }`}
+                    className={`font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg transform transition-all duration-700 delay-300 ${isActive ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+                      }`}
                   >
                     {slide.description}
                   </p>
 
                   {/* Buttons */}
                   <div
-                    className={`flex flex-wrap gap-4 transform transition-all duration-700 delay-400 ${
-                      isActive ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-                    }`}
+                    className={`flex flex-wrap gap-4 transform transition-all duration-700 delay-400 ${isActive ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+                      }`}
                   >
                     {/* Primary button */}
                     {slide.primaryBtn.to ? (
@@ -321,9 +315,8 @@ export default function Home() {
                   setCurrentSlide(index);
                   setProgress(0);
                 }}
-                className={`h-2.5 rounded-full transition-all duration-500 cursor-pointer ${
-                  isActive ? 'w-8 bg-primary shadow-[0_0_10px_rgba(204,168,46,0.5)]' : 'w-2.5 bg-on-surface-variant/40 hover:bg-on-surface-variant'
-                }`}
+                className={`h-2.5 rounded-full transition-all duration-500 cursor-pointer ${isActive ? 'w-8 bg-primary shadow-[0_0_10px_rgba(204,168,46,0.5)]' : 'w-2.5 bg-on-surface-variant/40 hover:bg-on-surface-variant'
+                  }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
             );
@@ -341,11 +334,11 @@ export default function Home() {
                 <p className="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Happy Patients</p>
               </div>
               <div className="text-center p-10 bg-surface-container rounded-card shadow-lg border border-outline-variant/20">
-                <Counter target="20" />
+                <Counter target="10" />
                 <p className="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Years Experience</p>
               </div>
               <div className="text-center p-10 bg-surface-container rounded-card shadow-lg border border-outline-variant/20">
-                <Counter target="50000" />
+                <Counter target="30000" />
                 <p className="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Treatments Done</p>
               </div>
             </div>
