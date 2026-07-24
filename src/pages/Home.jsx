@@ -7,6 +7,12 @@ import carouselTreatment from '../assets/carousel_treatment.png';
 import carouselAligner from '../assets/carousel_aligner.png';
 import carouselCleaning from '../assets/carousel_cleaning.jpg';
 
+import hero3dScanner from '../assets/hero_3d_scanner.png';
+import heroTeethCleaning from '../assets/hero_teeth_cleaning.png';
+import heroDigitalAligners from '../assets/hero_digital_aligners.png';
+import heroClinicInterior from '../assets/hero_clinic_interior.png';
+import heroEndoTreatment from '../assets/hero_endo_treatment.jpg';
+
 function Counter({ target }) {
   const [count, setCount] = useState(0);
   const elementRef = useRef(null);
@@ -86,49 +92,49 @@ function RevealOnScroll({ children, delayClass = '' }) {
 
 const slides = [
   {
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDY5JfLMrMpy1D8rcODwctVGbrbAd2khaNeRr0xhgNDN8o5_x8K1ourVkhJNfE9dZkL1S-7QKvfTV30NMPVqYOkOgAc_OBu8lRhDH7SswtMTj9HFpRpEXmfR7Oo_KWd1ye_f9UDGCsMAVqbJLbKalrv1F8HueLrKx2kkv5Sm266GTI7U2um_7Jim88-KIKuGfYVHAg_BqYv88JV9Z-cock5166WkylkjzdT5v8_ABK8DiXTPWaT424niTu96xTIs6panjOKbZP3Zik',
+    image: hero3dScanner,
     tag: "GUMANMAL JI'S",
     title: "Shree Radhe",
     titlePrimary: "Dental Hospital",
-    description: "Creating Beautiful Smiles Everyday! Experience world-class dental treatments with state-of-the-art technology and compassionate care.",
+    description: "Creating Beautiful Smiles Everyday! Experience world-class 3D intraoral scanning and advanced digital dentistry with compassionate care.",
     primaryBtn: { text: "Book Appointment", to: "/booking" },
     secondaryBtn: { text: "Call Now", href: "tel:+916378556857", isPhone: true },
   },
   {
-    image: carouselXray,
-    tag: "DIGITAL DIAGNOSTICS",
-    title: "Precision Imaging &",
-    titlePrimary: "X-Ray Diagnostics",
-    description: "Equipped with the latest high-definition digital radiology to diagnose oral issues accurately and create personalized treatment pathways.",
+    image: heroTeethCleaning,
+    tag: "GENTLE CARE",
+    title: "Comfortable & Painless",
+    titlePrimary: "Teeth Cleaning",
+    description: "Enjoy a refreshing, high-gloss clean and preventative oral hygiene checkup with gentle, expert care in a calming environment.",
     primaryBtn: { text: "Book Appointment", to: "/booking" },
-    secondaryBtn: { text: "Learn More", to: "/services" },
+    secondaryBtn: { text: "Our Services", to: "/services" },
   },
   {
-    image: carouselTreatment,
-    tag: "CLINICAL EXCELLENCE",
-    title: "Gentle Dental &",
-    titlePrimary: "Pain-Free Procedures",
-    description: "Experience advanced therapies from expert specialists utilizing pain-free methods and compassionate, gentle techniques for all ages.",
-    primaryBtn: { text: "Our Services", to: "/services" },
-    secondaryBtn: { text: "Book Appointment", to: "/booking" },
-  },
-  {
-    image: carouselAligner,
-    tag: "COSMETIC DENTISTRY",
-    title: "Clear Invisible Orthodontic",
-    titlePrimary: "Aligners",
-    description: "Straighten your teeth comfortably and discreetly with custom-fit, clear, and removable aligners. Remodel your smile with confidence.",
+    image: heroDigitalAligners,
+    tag: "ADVANCED ORTHODONTICS",
+    title: "3D Digital Clear",
+    titlePrimary: "Invisible Aligners",
+    description: "Transform your smile with computer-designed 3D invisible aligners. Straighten your teeth discreetly, comfortably, and efficiently.",
     primaryBtn: { text: "Book Appointment", to: "/booking" },
     secondaryBtn: { text: "Explore Aligners", to: "/services" },
   },
   {
-    image: carouselCleaning,
-    tag: "PREVENTIVE HYGIENE",
-    title: "Artistry In Teeth",
-    titlePrimary: "Hygiene & Care",
-    description: "Preserve and maintain your oral health with expert teeth cleaning, scale-polishing, and complete protective treatments.",
+    image: heroClinicInterior,
+    tag: "WORLD-CLASS INFRASTRUCTURE",
+    title: "State-of-the-Art",
+    titlePrimary: "Modern Clinic Facility",
+    description: "Step into our ultra-hygienic, fully equipped modern dental suites designed for maximum safety, relaxation, and patient comfort.",
     primaryBtn: { text: "About Us", to: "/about" },
     secondaryBtn: { text: "Book Appointment", to: "/booking" },
+  },
+  {
+    image: heroEndoTreatment,
+    tag: "MICROSCOPIC ENDODONTICS",
+    title: "Precision Microscopic",
+    titlePrimary: "Root Canal Therapy",
+    description: "Save natural teeth with advanced digital endodontic tools, rubber-dam isolation, and painless microscopic precision treatments.",
+    primaryBtn: { text: "Book Appointment", to: "/booking" },
+    secondaryBtn: { text: "View Services", to: "/services" },
   }
 ];
 
