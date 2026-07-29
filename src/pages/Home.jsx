@@ -451,7 +451,7 @@ export default function Home() {
                     </div>
                     <div>
                       <h4 className="font-label-md text-label-md text-on-surface mb-1">Experienced Dentists</h4>
-                      <p className="font-caption text-caption text-on-surface-variant">Our team has over 20 years of combined clinical experience.</p>
+                      <p className="font-caption text-caption text-on-surface-variant">5+ years of dedicated clinical experience.</p>
                     </div>
                   </div>
                   <div className="flex gap-6 p-6 rounded-card bg-surface-container border border-outline-variant/20 shadow-sm hover:shadow-md transition-all">
