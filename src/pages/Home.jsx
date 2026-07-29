@@ -103,7 +103,7 @@ const slides = [
     tag: "REG. NO.: A11108 • GOLD MEDALIST SURGEON",
     title: "Shree Radhe",
     titlePrimary: "Dental Hospital",
-    description: "Dr. Rinku S. Kumawat (Gold Medalist, BDS MUHS). \"स्वस्थ दांत, सुंदर मुस्कान — हमारी पहचान\"",
+    description: "Dr. Rinku S. Kumawat (Gold Medalist, BDS MUHS Nashik). \"स्वस्थ दांत, सुंदर मुस्कान — हमारी पहचान\"",
     primaryBtn: { text: "Book Appointment", to: "/booking" },
     secondaryBtn: { text: "Call +91 6378556857", href: "tel:+916378556857", isPhone: true },
   },
@@ -519,7 +519,7 @@ export default function Home() {
                           Degree Convocation Ceremony
                         </div>
                         <span className="text-xs font-bold text-white">Dr. Rinku Kumawat (Gold Medalist)</span>
-                        <span className="text-[11px] text-white/80">MUHS Mumbai University Convocation</span>
+                        <span className="text-[11px] text-white/80">MUHS Nashik University Convocation</span>
                       </div>
                     </Link>
                   </div>

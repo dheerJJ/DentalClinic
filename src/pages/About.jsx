@@ -45,7 +45,7 @@ export default function About() {
               "स्वस्थ दांत, सुंदर मुस्कान — हमारी पहचान"
             </p>
             <p className="text-sm md:text-base leading-relaxed text-on-surface-variant mb-8 max-w-xl">
-              Headed by <strong>Dr. Rinku S. Kumawat</strong> (Gold Medalist, BDS MUHS), we provide compassionate, state-of-the-art dental care with painless techniques and digital precision.
+              Headed by <strong>Dr. Rinku S. Kumawat</strong> (Gold Medalist, BDS MUHS Nashik), we provide compassionate, state-of-the-art dental care with painless techniques and digital precision.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
@@ -80,13 +80,13 @@ export default function About() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6 text-white">
                   <span className="text-xs font-bold text-primary tracking-wider uppercase">Lead Dental Surgeon</span>
                   <h3 className="text-xl font-bold">Dr. Rinku S. Kumawat</h3>
-                  <p className="text-xs text-white/90">Gold Medalist | BDS | MUHS</p>
+                  <p className="text-xs text-white/90">Gold Medalist | BDS | MUHS Nashik</p>
                 </div>
               </div>
               {/* floating badge */}
               <div className="absolute -bottom-6 -right-4 md:-bottom-8 md:-right-8 p-5 md:p-6 bg-primary text-on-primary rounded-xl shadow-2xl">
                 <p className="font-headline-md text-xl md:text-2xl font-bold leading-snug">🥇 Gold Medalist</p>
-                <p className="text-xs leading-snug opacity-90">MUHS University</p>
+                <p className="text-xs leading-snug opacity-90">MUHS Nashik University</p>
               </div>
             </div>
             {/* text */}
@@ -100,12 +100,12 @@ export default function About() {
               <div className="flex flex-wrap gap-2 mb-6">
                 <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold">🥇 Gold Medalist</span>
                 <span className="px-3 py-1 bg-surface-container rounded-full text-xs font-semibold text-on-surface">Dental Surgeon</span>
-                <span className="px-3 py-1 bg-surface-container rounded-full text-xs font-semibold text-on-surface">BDS | MUHS</span>
+                <span className="px-3 py-1 bg-surface-container rounded-full text-xs font-semibold text-on-surface">BDS | MUHS Nashik</span>
                 <span className="px-3 py-1 bg-surface-container rounded-full text-xs font-semibold text-on-surface">Reg. No.: A11108</span>
               </div>
               <div className="flex flex-col gap-4 text-base leading-relaxed text-on-surface-variant">
                 <p>
-                  <strong>Dr. Rinku S. Kumawat</strong> is a distinguished Dental Surgeon and Gold Medalist graduate from Maharashtra University of Health Sciences (MUHS). She brings immense clinical expertise and surgical precision to Shree Radhe Dental Hospital.
+                  <strong>Dr. Rinku S. Kumawat</strong> is a distinguished Dental Surgeon and Gold Medalist graduate from Maharashtra University of Health Sciences (MUHS Nashik). She brings immense clinical expertise and surgical precision to Shree Radhe Dental Hospital.
                 </p>
                 <p>
                   Under her leadership, Shree Radhe Dental Hospital has established itself as a premier multi-specialty dental clinic in Chomu, offering 13 comprehensive oral care services ranging from painless Root Canal Therapy (RCT) and titanium Dental Implants to Orthodontic Braces, Fixed Dentures, and Cosmetic Smile Designing.
@@ -139,7 +139,7 @@ export default function About() {
                   Academic Excellence & Convocation Ceremony
                 </h3>
                 <p className="text-sm md:text-base leading-relaxed text-on-surface-variant">
-                  Official convocation ceremony image showing <strong>Dr. Rinku S. Kumawat</strong> receiving her degree certificate and Academic Gold Medal honor for highest scholastic achievement at Maharashtra University of Health Sciences (MUHS).
+                  Official convocation ceremony image showing <strong>Dr. Rinku S. Kumawat</strong> receiving her degree certificate and Academic Gold Medal honor for highest scholastic achievement at Maharashtra University of Health Sciences (MUHS Nashik).
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                   <div className="p-4 rounded-2xl bg-surface-container-high border border-outline-variant/10">
@@ -305,7 +305,7 @@ export default function About() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-4 text-white">
                     <p className="text-xs font-bold text-primary">Gold Medal Honors Wall</p>
-                    <p className="text-[11px] text-white/90">MUHS Mumbai Convocation & Patient Gallery</p>
+                    <p className="text-[11px] text-white/90">MUHS Nashik Convocation & Patient Gallery</p>
                   </div>
                 </div>
               </div>
@@ -376,7 +376,7 @@ export default function About() {
               onClick={(e) => e.stopPropagation()}
             />
             <div className="mt-4 text-center text-white/90 font-medium text-sm">
-              Dr. Rinku S. Kumawat — Convocation & Academic Gold Medal Award Ceremony (BDS, MUHS Mumbai)
+              Dr. Rinku S. Kumawat — Convocation & Academic Gold Medal Award Ceremony (BDS, MUHS Nashik)
             </div>
           </div>
         </div>

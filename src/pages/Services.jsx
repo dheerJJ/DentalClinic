@@ -123,7 +123,7 @@ export default function Services() {
               Comprehensive <span className="text-gradient-logo">Dental Treatments</span>
             </h1>
             <p className="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-              Under the expert leadership of <strong>Dr. Rinku S. Kumawat</strong> (Gold Medalist, BDS MUHS Mumbai, Ex. CA Govt Hospital), Shree Radhe Dental Hospital provides all 13 core dental treatments with modern digital technology and complete hygiene.
+              Under the expert leadership of <strong>Dr. Rinku S. Kumawat</strong> (Gold Medalist, BDS MUHS Nashik), Shree Radhe Dental Hospital provides all 13 core dental treatments with modern digital technology and complete hygiene.
             </p>
           </div>
         </div>
