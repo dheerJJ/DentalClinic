@@ -103,7 +103,7 @@ const slides = [
     tag: "REG. NO.: A11108 • GOLD MEDALIST SURGEON",
     title: "Shree Radhe",
     titlePrimary: "Dental Hospital",
-    description: "Dr. Rinku S. Kumawat (Gold Medalist, BDS MUHS Mumbai, Ex. CA Govt Hospital). \"स्वस्थ दांत, सुंदर मुस्कान — हमारी पहचान\"",
+    description: "Dr. Rinku S. Kumawat (Gold Medalist, BDS MUHS). \"स्वस्थ दांत, सुंदर मुस्कान — हमारी पहचान\"",
     primaryBtn: { text: "Book Appointment", to: "/booking" },
     secondaryBtn: { text: "Call +91 6378556857", href: "tel:+916378556857", isPhone: true },
   },
