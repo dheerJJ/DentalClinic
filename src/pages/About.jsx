@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import drRinku from '../assets/Dr-RINKU-S-KUMAWAT.png';
 import drRinkuConvocation from '../assets/dr_rinku_convocation_award.jpg';
+import awardCeremonyVideo from '../assets/awardCeramonyvideo.mp4';
 import clinicOperatory from '../assets/clinic_operatory_chairs.png';
 import clinicReceptionDesk from '../assets/clinic_reception_desk.png';
 import clinicReceptionWall from '../assets/clinic_reception_wall.png';
@@ -129,43 +130,70 @@ export default function About() {
       <section className="py-12 bg-surface-container-lowest border-y border-outline-variant/10">
         <div className="max-w-container-max mx-auto px-5 md:px-margin-desktop">
           <div className="bg-surface-container p-6 md:p-10 rounded-3xl border border-outline-variant/20 shadow-xl overflow-hidden">
+            <div className="text-center max-w-2xl mx-auto mb-8">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-amber-500/10 text-amber-500 rounded-full text-xs font-bold uppercase tracking-wider mb-3">
+                <span className="material-symbols-outlined text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>workspace_premium</span>
+                Degree &amp; Gold Medal Convocation
+              </div>
+              <h3 className="font-headline-lg text-2xl md:text-3xl font-semibold text-on-background mb-3">
+                Academic Excellence &amp; Convocation Ceremony
+              </h3>
+              <p className="text-sm md:text-base leading-relaxed text-on-surface-variant">
+                Official convocation video &amp; photograph showing <strong>Dr. Rinku S. Kumawat</strong> receiving her degree certificate and Academic Gold Medal honor for highest scholastic achievement at Maharashtra University of Health Sciences (MUHS Nashik).
+              </p>
+            </div>
+
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-              <div className="lg:col-span-7 space-y-4">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-amber-500/10 text-amber-500 rounded-full text-xs font-bold uppercase tracking-wider">
-                  <span className="material-symbols-outlined text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>workspace_premium</span>
-                  Degree & Gold Medal Convocation
+              {/* Live Video Player */}
+              <div className="lg:col-span-7">
+                <div className="rounded-2xl overflow-hidden shadow-2xl border-2 border-primary/30 bg-black aspect-video relative group">
+                  <video
+                    controls
+                    playsInline
+                    preload="metadata"
+                    poster={drRinkuConvocation}
+                    className="w-full h-full object-cover"
+                  >
+                    <source src={awardCeremonyVideo} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
                 </div>
-                <h3 className="font-headline-lg text-2xl md:text-3xl font-semibold text-on-background">
-                  Academic Excellence & Convocation Ceremony
-                </h3>
-                <p className="text-sm md:text-base leading-relaxed text-on-surface-variant">
-                  Official convocation ceremony image showing <strong>Dr. Rinku S. Kumawat</strong> receiving her degree certificate and Academic Gold Medal honor for highest scholastic achievement at Maharashtra University of Health Sciences (MUHS Nashik).
-                </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                  <div className="p-4 rounded-2xl bg-surface-container-high border border-outline-variant/10">
-                    <p className="text-xs text-primary font-bold uppercase tracking-wider mb-1">Degree Awarded</p>
-                    <p className="text-sm font-semibold text-on-surface">Bachelor of Dental Surgery (BDS)</p>
-                  </div>
-                  <div className="p-4 rounded-2xl bg-surface-container-high border border-outline-variant/10">
-                    <p className="text-xs text-amber-500 font-bold uppercase tracking-wider mb-1">Honor Distinction</p>
-                    <p className="text-sm font-semibold text-on-surface">Gold Medalist & Academic Excellence</p>
-                  </div>
+                <div className="mt-3 flex items-center justify-between text-xs text-on-surface-variant/80 px-1">
+                  <span className="flex items-center gap-1 font-medium text-amber-400">
+                    <span className="material-symbols-outlined text-sm">movie</span> Convocation Award Video Clip
+                  </span>
+                  <span>BDS • MUHS Nashik University</span>
                 </div>
               </div>
-              <div className="lg:col-span-5 relative group cursor-pointer" onClick={() => setIsImageOpen(true)}>
-                <div className="rounded-2xl overflow-hidden shadow-2xl border-2 border-primary/30 aspect-[4/3] md:aspect-[16/11] relative">
-                  <img
-                    src={drRinkuConvocation}
-                    alt="Dr. Rinku S. Kumawat receiving Convocation Degree & Gold Medal Award"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-90 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4 text-white">
-                    <div className="flex items-center justify-between">
-                      <span className="text-xs font-semibold text-amber-300">Convocation Ceremony Photo</span>
-                      <span className="text-xs bg-primary/80 px-2.5 py-1 rounded-full flex items-center gap-1 font-medium">
-                        <span className="material-symbols-outlined text-sm">zoom_in</span> View Full Image
-                      </span>
+
+              {/* Photo & Honor Highlights */}
+              <div className="lg:col-span-5 space-y-4">
+                <div className="relative group cursor-pointer" onClick={() => setIsImageOpen(true)}>
+                  <div className="rounded-2xl overflow-hidden shadow-xl border border-outline-variant/30 aspect-[4/3] relative">
+                    <img
+                      src={drRinkuConvocation}
+                      alt="Dr. Rinku S. Kumawat receiving Convocation Degree & Gold Medal Award"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4 text-white">
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs font-semibold text-amber-300">Convocation Ceremony Photo</span>
+                        <span className="text-xs bg-primary/80 px-2.5 py-1 rounded-full flex items-center gap-1 font-medium">
+                          <span className="material-symbols-outlined text-sm">zoom_in</span> Enlarge Photo
+                        </span>
+                      </div>
                     </div>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="p-3.5 rounded-xl bg-surface-container-high border border-outline-variant/10">
+                    <p className="text-[11px] text-primary font-bold uppercase tracking-wider mb-0.5">Degree</p>
+                    <p className="text-xs font-semibold text-on-surface">Bachelor of Dental Surgery (BDS)</p>
+                  </div>
+                  <div className="p-3.5 rounded-xl bg-surface-container-high border border-outline-variant/10">
+                    <p className="text-[11px] text-amber-500 font-bold uppercase tracking-wider mb-0.5">Honor</p>
+                    <p className="text-xs font-semibold text-on-surface">Gold Medalist Ranker</p>
                   </div>
                 </div>
               </div>
