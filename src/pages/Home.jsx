@@ -336,15 +336,15 @@ export default function Home() {
           <RevealOnScroll>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
               <div className="text-center p-10 bg-surface-container rounded-card shadow-lg border border-outline-variant/20">
-                <Counter target="15000" />
+                <Counter target="5000" />
                 <p className="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Happy Patients</p>
               </div>
               <div className="text-center p-10 bg-surface-container rounded-card shadow-lg border border-outline-variant/20">
-                <Counter target="10" />
+                <Counter target="05" />
                 <p className="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Years Experience</p>
               </div>
               <div className="text-center p-10 bg-surface-container rounded-card shadow-lg border border-outline-variant/20">
-                <Counter target="30000" />
+                <Counter target="8000" />
                 <p className="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Treatments Done</p>
               </div>
             </div>
@@ -657,7 +657,7 @@ export default function Home() {
                 </div>
                 <div className="mt-8 flex items-center justify-center gap-2 text-on-surface-variant font-caption text-caption">
                   <span className="material-symbols-outlined text-sm">schedule</span>
-                  Available: Mon - Fri, 8:00 AM - 6:00 PM
+                  Available: Mon - Sun, 9:00 AM - 7:00 PM
                 </div>
               </div>
             </div>

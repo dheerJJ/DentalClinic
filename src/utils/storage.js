@@ -10,7 +10,7 @@ const DEFAULT_SETTINGS = {
   contactEmail: 'srdhsmile@gmail.com',
   contactPhone: '+91-6378556857',
   address: 'Shivdhara Hospital ke samne, Jaipur Road, Chomu',
-  hours: 'Mon - Sun: 8:00 AM - 8:00 PM',
+  hours: 'Mon - Sun: 9:00 AM - 7:00 PM',
   primaryColor: 'teal', // Options: 'teal', 'navy', 'indigo', 'emerald', 'rose'
 };
 
