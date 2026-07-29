@@ -330,7 +330,7 @@ export default function Booking() {
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
                     <span className="material-symbols-outlined text-primary" style={{ fontVariationSettings: "'FILL' 1" }}>verified_user</span>
                   </div>
-                  <p className="text-body-md text-on-surface-variant">Board-certified specialists with 15+ years experience.</p>
+                  <p className="text-body-md text-on-surface-variant">Board-certified specialists with 5+ years experience.</p>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
