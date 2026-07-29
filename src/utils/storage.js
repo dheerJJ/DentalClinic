@@ -2,18 +2,32 @@
 
 const DEFAULT_SETTINGS = {
   clinicName: 'Shree Radhe Dental Hospital',
+  hindiName: 'श्री राधे डेंटल हॉस्पिटल',
+  tagline: 'स्वस्थ दांत, सुंदर मुस्कान — हमारी पहचान',
+  doctorName: 'Dr. Rinku S. Kumawat',
+  qualifications: 'Gold Medalist | Dental Surgeon | BDS | MUHS Mumbai | Ex. CA Government Hospital',
+  regNo: 'A11108',
   contactEmail: 'srdhsmile@gmail.com',
   contactPhone: '+91-6378556857',
-  hours: 'Mon - Fri: 8:00 AM - 6:00 PM',
+  address: 'Shivdhara Hospital ke samne, Jaipur Road, Chomu',
+  hours: 'Mon - Sun: 8:00 AM - 8:00 PM',
   primaryColor: 'teal', // Options: 'teal', 'navy', 'indigo', 'emerald', 'rose'
 };
 
 const DEFAULT_SERVICES = {
-  checkup: { id: 'checkup', title: 'Routine Checkup & Cleaning', cost: '₹500', duration: '45 mins', priceVal: 500 },
-  whitening: { id: 'whitening', title: 'Teeth Whitening', cost: '₹2,500', duration: '60 mins', priceVal: 2500 },
-  emergency: { id: 'emergency', title: 'Emergency Dental Care', cost: '₹1,000', duration: 'Immediate', priceVal: 1000 },
-  orthodontics: { id: 'orthodontics', title: 'Orthodontic Consultation', cost: '₹1,500', duration: '60 mins', priceVal: 1500 },
-  implants: { id: 'implants', title: 'Dental Implants', cost: '₹15,000', duration: '90 mins', priceVal: 15000 },
+  digital_xray: { id: 'digital_xray', title: 'Digital X-Ray Examination', hindiTitle: 'डिजिटल X-Ray जांच', cost: '₹200', duration: '15 mins', priceVal: 200 },
+  rct: { id: 'rct', title: 'Root Canal Treatment (RCT)', hindiTitle: 'रूट केनाल उपचार (RCT)', cost: '₹2,500', duration: '45 mins', priceVal: 2500 },
+  implants: { id: 'implants', title: 'Dental Implants', hindiTitle: 'इंप्लांट द्वारा दांत लगाना', cost: '₹15,000', duration: '90 mins', priceVal: 15000 },
+  braces: { id: 'braces', title: 'Braces & Aligners', hindiTitle: 'टेढ़े-मेढ़े दांतों का इलाज (तार लगाना)', cost: '₹12,000', duration: '60 mins', priceVal: 12000 },
+  fixed_dentures: { id: 'fixed_dentures', title: 'Fixed Teeth & Crowns', hindiTitle: 'फिक्स दांत चिपकाना / फिक्स बत्तीसी', cost: '₹3,000', duration: '45 mins', priceVal: 3000 },
+  cleaning: { id: 'cleaning', title: 'Teeth Scaling & Polishing', hindiTitle: 'दांतों की सफाई', cost: '₹500', duration: '30 mins', priceVal: 500 },
+  whitening: { id: 'whitening', title: 'Cosmetic & Smile Designing', hindiTitle: 'कॉस्मेटिक एवं स्माइल डिजाइनिंग', cost: '₹2,500', duration: '60 mins', priceVal: 2500 },
+  extraction: { id: 'extraction', title: 'Painless Tooth Extraction', hindiTitle: 'बिना दर्द के दांत निकालना', cost: '₹500', duration: '30 mins', priceVal: 500 },
+  filling: { id: 'filling', title: 'Tooth-Colored Restoration', hindiTitle: 'दांतों के रंग के मसाले भरना', cost: '₹600', duration: '30 mins', priceVal: 600 },
+  pyorrhea: { id: 'pyorrhea', title: 'Pyorrhea & Gum Treatment', hindiTitle: 'पायरिया / खून आना व मसूड़ों का इलाज', cost: '₹1,000', duration: '45 mins', priceVal: 1000 },
+  full_dentures: { id: 'full_dentures', title: 'Full & Partial Dentures', hindiTitle: 'बत्तीसी (फिक्स व रिमूवेबल)', cost: '₹8,000', duration: '60 mins', priceVal: 8000 },
+  mouth_ulcer: { id: 'mouth_ulcer', title: 'Mouth Ulcer & Lesion Care', hindiTitle: 'मुंह के छाले व घाव का विशेष इलाज', cost: '₹400', duration: '20 mins', priceVal: 400 },
+  pediatric: { id: 'pediatric', title: 'Pediatric Dentistry', hindiTitle: 'बच्चों के दांतों का इलाज', cost: '₹500', duration: '30 mins', priceVal: 500 },
 };
 
 const DEFAULT_APPOINTMENTS = [

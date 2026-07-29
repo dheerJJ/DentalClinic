@@ -54,6 +54,32 @@ export default function Navbar() {
 
   return (
     <>
+      {/* Top Banner with Clinic Info */}
+      <div className="bg-primary text-on-primary py-1.5 px-4 text-xs font-label-md transition-all hidden sm:block">
+        <div className="max-w-container-max mx-auto flex flex-wrap justify-between items-center gap-2">
+          <div className="flex items-center gap-4">
+            <span className="bg-white/20 px-2 py-0.5 rounded text-[11px] font-bold tracking-wider uppercase">
+              Reg. No.: A11108
+            </span>
+            <span className="hidden md:inline font-semibold">
+              Dr. Rinku S. Kumawat <span className="opacity-90 font-normal">(Gold Medalist | Dental Surgeon | BDS MUHS Mumbai)</span>
+            </span>
+          </div>
+          <div className="flex items-center gap-4">
+            <span className="italic font-medium hidden lg:inline">
+              "स्वस्थ दांत, सुंदर मुस्कान — हमारी पहचान"
+            </span>
+            <a
+              href="tel:+916378556857"
+              className="flex items-center gap-1 font-bold hover:underline bg-white/10 px-2.5 py-0.5 rounded-full"
+            >
+              <span className="material-symbols-outlined text-[14px]">call</span>
+              +91 6378556857
+            </a>
+          </div>
+        </div>
+      </div>
+
       <nav className="sticky top-0 w-full bg-surface/90 backdrop-blur-md z-50 shadow-[0px_20px_24px_-4px_rgba(19,27,46,0.08)]">
         <div className="flex justify-between items-center max-w-container-max mx-auto px-5 md:px-margin-desktop h-16 md:h-20">
           <Link to="/" className="flex items-center gap-2 px-2.5 py-1 bg-white/95 hover:bg-white rounded-xl shadow-sm transition-all duration-300">

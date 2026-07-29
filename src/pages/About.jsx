@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import drPriyaSharma from '../assets/dr_priya_sharma.png';
-import drArjunMehta from '../assets/dr_arjun_mehta.png';
-import drRajeshIyer from '../assets/dr_rajesh_iyer.png';
 import drRinku from '../assets/Dr-RINKU-S-KUMAWAT.png';
+import clinicOperatory from '../assets/clinic_operatory_chairs.png';
+import clinicReceptionDesk from '../assets/clinic_reception_desk.png';
+import clinicReceptionWall from '../assets/clinic_reception_wall.png';
+import clinicFrontDoor from '../assets/clinic_front_door.png';
+import clinicBuildingExterior from '../assets/clinic_building_exterior.png';
 
 export default function About() {
   useEffect(() => {
@@ -15,75 +17,106 @@ export default function About() {
 
       {/* ─── 1. HERO ─────────────────────────────────── */}
       <section
-        className="relative w-full min-h-[480px] md:min-h-[600px] lg:min-h-[716px] flex items-center overflow-hidden"
+        className="relative w-full min-h-[480px] md:min-h-[600px] flex items-center overflow-hidden"
         style={{
           backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDY5JfLMrMpy1D8rcODwctVGbrbAd2khaNeRr0xhgNDN8o5_x8K1ourVkhJNfE9dZkL1S-7QKvfTV30NMPVqYOkOgAc_OBu8lRhDH7SswtMTj9HFpRpEXmfR7Oo_KWd1ye_f9UDGCsMAVqbJLbKalrv1F8HueLrKx2kkv5Sm266GTI7U2um_7Jim88-KIKuGfYVHAg_BqYv88JV9Z-cock5166WkylkjzdT5v8_ABK8DiXTPWaT424niTu96xTIs6panjOKbZP3Zik')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-transparent" />
         <div className="relative z-10 max-w-container-max mx-auto px-5 md:px-margin-desktop w-full py-16 md:py-24">
-          <div className="max-w-xl">
-            <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold tracking-[0.05em] mb-6">
-              ESTABLISHED IN 2008
-            </span>
+          <div className="max-w-2xl">
+            <div className="flex flex-wrap items-center gap-2 mb-4">
+              <span className="inline-block px-3.5 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-wide">
+                REG. NO.: A11108
+              </span>
+              <span className="inline-block px-3.5 py-1 rounded-full bg-white/10 text-on-background text-xs font-semibold">
+                GOLD MEDALIST SURGEON
+              </span>
+            </div>
             <h1 className="font-headline-xl text-3xl sm:text-4xl lg:text-5xl leading-tight text-on-background mb-6">
-              Compassionate Care Meets{' '}
-              <span className="text-gradient-logo italic">Clinical Excellence.</span>
+              Shree Radhe <span className="text-gradient-logo italic">Dental Hospital</span>
             </h1>
-            <p className="text-base md:text-lg leading-relaxed text-on-background/80 mb-8 max-w-[480px]">
-              We believe a visit to the dentist should be a highlight of your day. Our mission is to combine the latest dental technology with a gentle, patient-first approach.
+            <p className="text-base md:text-lg leading-relaxed text-on-background/80 mb-6 max-w-xl font-medium">
+              "स्वस्थ दांत, सुंदर मुस्कान — हमारी पहचान"
+            </p>
+            <p className="text-sm md:text-base leading-relaxed text-on-surface-variant mb-8 max-w-xl">
+              Headed by <strong>Dr. Rinku S. Kumawat</strong> (Gold Medalist, BDS MUHS Mumbai, Ex. CA Govt Hospital), we provide compassionate, state-of-the-art dental care with painless techniques and digital precision.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
-                to="/services"
+                to="/booking"
                 className="inline-block bg-primary text-on-primary px-8 py-4 rounded-xl text-sm font-semibold tracking-[0.05em] hover:bg-primary-container transition-all hover:shadow-lg"
               >
-                Our Services
+                Book Appointment
               </Link>
-              <button className="border border-outline text-on-background px-8 py-4 rounded-xl text-sm font-semibold tracking-[0.05em] bg-transparent hover:bg-surface-container-high transition-all">
-                Tour The Clinic
-              </button>
+              <Link
+                to="/services"
+                className="border border-outline text-on-background px-8 py-4 rounded-xl text-sm font-semibold tracking-[0.05em] bg-transparent hover:bg-surface-container-high transition-all"
+              >
+                View 13 Specialties
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ─── 2. OUR STORY ────────────────────────────── */}
+      {/* ─── 2. LEAD SURGEON & STORY ────────────────────────────── */}
       <section className="py-16 md:py-20 bg-background">
         <div className="max-w-container-max mx-auto px-5 md:px-margin-desktop">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* image */}
             <div className="relative">
-              <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl border border-outline-variant/20">
+              <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl border border-outline-variant/20 relative group">
                 <img
                   src={drRinku}
-                  alt="Shree Radhe founders"
-                  className="w-full h-full object-cover"
+                  alt="Dr. Rinku S. Kumawat"
+                  className="w-full h-full object-cover object-top"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6 text-white">
+                  <span className="text-xs font-bold text-primary tracking-wider uppercase">Lead Dental Surgeon</span>
+                  <h3 className="text-xl font-bold">Dr. Rinku S. Kumawat</h3>
+                  <p className="text-xs text-white/90">Gold Medalist | BDS | MUHS Mumbai</p>
+                </div>
               </div>
               {/* floating badge */}
               <div className="absolute -bottom-6 -right-4 md:-bottom-8 md:-right-8 p-5 md:p-6 bg-primary text-on-primary rounded-xl shadow-2xl">
-                <p className="font-headline-md text-xl md:text-2xl font-medium leading-snug">15+</p>
-                <p className="text-xs leading-snug opacity-90">Years of Community Trust</p>
+                <p className="font-headline-md text-xl md:text-2xl font-bold leading-snug">🥇 Gold Medalist</p>
+                <p className="text-xs leading-snug opacity-90">MUHS Mumbai University</p>
               </div>
             </div>
             {/* text */}
             <div className="pt-6 lg:pt-0">
-              <h2 className="font-headline-lg text-2xl md:text-3xl font-semibold leading-tight text-on-background mb-6">
-                Our Journey Towards Modern Dentistry
+              <span className="text-xs font-bold tracking-wider text-primary uppercase mb-2 block">
+                MEET OUR LEAD SURGEON
+              </span>
+              <h2 className="font-headline-lg text-2xl md:text-3xl font-semibold leading-tight text-on-background mb-4">
+                Dr. Rinku S. Kumawat
               </h2>
+              <div className="flex flex-wrap gap-2 mb-6">
+                <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold">🥇 Gold Medalist</span>
+                <span className="px-3 py-1 bg-surface-container rounded-full text-xs font-semibold text-on-surface">Dental Surgeon</span>
+                <span className="px-3 py-1 bg-surface-container rounded-full text-xs font-semibold text-on-surface">BDS | MUHS Mumbai</span>
+                <span className="px-3 py-1 bg-surface-container rounded-full text-xs font-semibold text-on-surface">Ex. CA Govt Hospital</span>
+                <span className="px-3 py-1 bg-surface-container rounded-full text-xs font-semibold text-on-surface">Reg. No.: A11108</span>
+              </div>
               <div className="flex flex-col gap-4 text-base leading-relaxed text-on-surface-variant">
-                <p>Founded on the principle that oral health is the gateway to overall wellness, Shree Radhe Dental Hospital began as a small family practice with a big vision. We wanted to redefine the dental experience, removing the anxiety traditionally associated with the dentist's chair.</p>
-                <p>Over the past decade, we have grown into a multi-specialty center, investing in 3D imaging, laser dentistry, and digital impressions to ensure our patients receive the most precise care available today.</p>
-                <p>Today, our commitment remains unchanged: providing a sanctuary where modern science meets human touch.</p>
+                <p>
+                  <strong>Dr. Rinku S. Kumawat</strong> is a distinguished Dental Surgeon and Gold Medalist graduate from Maharashtra University of Health Sciences (MUHS), Mumbai. Having worked extensively in CA Government Hospitals, she brings immense clinical expertise and surgical precision to Shree Radhe Dental Hospital.
+                </p>
+                <p>
+                  Under her leadership, Shree Radhe Dental Hospital has established itself as a premier multi-specialty dental clinic in Chomu, offering 13 comprehensive oral care services ranging from painless Root Canal Therapy (RCT) and titanium Dental Implants to Orthodontic Braces, Fixed Dentures, and Cosmetic Smile Designing.
+                </p>
+                <p>
+                  Our clinic features state-of-the-art dual operatory dental suites equipped with ultra-low radiation Digital X-Rays, Sudershan air compressors, and strict autoclave sterilization standards.
+                </p>
               </div>
               <div className="mt-8 pt-8 border-t border-outline-variant/30">
                 <blockquote className="italic text-lg leading-relaxed text-on-background">
-                  "Technology gives us the tools, but empathy gives us the results."
+                  "आपकी मुस्कान ही हमारी पहचान है — Technology gives us precision, but empathy gives our patients comfort."
                 </blockquote>
-                <p className="mt-2 text-sm font-semibold tracking-[0.05em] text-primary">— Dr. RINKU S. KUMAWAT</p>
+                <p className="mt-2 text-sm font-semibold tracking-[0.05em] text-primary">— Dr. RINKU S. KUMAWAT (Gold Medalist)</p>
               </div>
             </div>
           </div>
@@ -191,28 +224,38 @@ export default function About() {
             {/* mosaic images */}
             <div className="grid grid-cols-2 gap-4">
               <div className="flex flex-col gap-4">
-                <div className="rounded-3xl overflow-hidden aspect-[4/5] shadow-md border border-outline-variant/10">
+                <div className="rounded-3xl overflow-hidden aspect-[4/5] shadow-md border border-outline-variant/10 group relative">
                   <img
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKje4rIE5gV1DSchBaraLBnx_vdq4qQHEvF1H0jqD0JLSRWA-wUbayst7wTI2aWcCYw3u1kLJkaVUWV7ooPYcLjlQI4g3MI9bpBHn33sCIJEarMN10cybdqyxwM0GRfVN1-t5NZe-SgtFTLwNuWDbC3G2gRVIiQWIK5pED2oGFfZLi2tw6_0PTfBgSlXvvt2tP3Qw2PTBSrfGH9R0WJcxZAInlTJCCvCy4bU2utLP3Rx8YsDuR1NdN8VEtc-8c1YofnhfnhfTCphw"
-                    alt="Dental treatment room"
-                    className="w-full h-full object-cover"
+                    src={clinicOperatory}
+                    alt="Shree Radhe Dual Dental Chair Setup"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-4 text-white">
+                    <p className="text-xs font-bold">Dual Dental Operatory Suite</p>
+                  </div>
                 </div>
-                <div className="rounded-3xl overflow-hidden aspect-square shadow-md border border-outline-variant/10">
+                <div className="rounded-3xl overflow-hidden aspect-square shadow-md border border-outline-variant/10 group relative">
                   <img
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnEwzEe9ECR0nWa3MeYvZHboWSatvZtRaP5KuwR8T4xZs4FVJRNvuASNBnuykbQJn_toi_yp8g_jOpXwUj7rcgrXkkRmxZZ8Z9__pfIjAUvS2RzN5zoIrmRK3GKtLFoFUYovFbTRp8UbVRGDhaKhPGvK1YfHyUO8jSCRXAnKIaKx_J5tacpHi0LiY_1-OKFryCvOvNLctmCj-km2Lcyo7RzZHW7jl721aRmEMU8Jo38t4VdDaFjtwLt_1G9BSzs3Z90Jz52d6OZ5A"
-                    alt="Dental instruments"
-                    className="w-full h-full object-cover"
+                    src={clinicReceptionDesk}
+                    alt="Shree Radhe Reception Desk"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-4 text-white">
+                    <p className="text-xs font-bold">Reception & UPI Desk</p>
+                  </div>
                 </div>
               </div>
               <div className="pt-8">
-                <div className="rounded-3xl overflow-hidden aspect-[4/6] shadow-md border border-outline-variant/10">
+                <div className="rounded-3xl overflow-hidden aspect-[4/6] shadow-md border border-outline-variant/10 group relative">
                   <img
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuClxMTy-GsOzbxGRzOwXAixOlsPWkJBpJYnkvoMuoc1UFcsT-DeSDmdbo2SYaiz8KE8kcm57z4Df0b-m2Yw1n1iCQYhKrreQB-JbBlPwedY8TfTS8en-ybiu-I2oXIwEJUDZV2ES8w_kMGv-tucnX2pDA8jkiqulJH0pGRskWgXaMoJJg-QN_0P4nU8WfJxFIqjxLsVarSDKr3xk96DFIdVfl8-Jgbpz-Z6LSwNF3yFLcsxCKGoF0AuvTTHgo6Pqt4IEoFsN-KzWQ8"
-                    alt="Clinic lobby"
-                    className="w-full h-full object-cover"
+                    src={clinicReceptionWall}
+                    alt="Dr. Rinku Kumawat Gold Medal Wall"
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-4 text-white">
+                    <p className="text-xs font-bold text-primary">Gold Medal Honors Wall</p>
+                    <p className="text-[11px] text-white/90">MUHS Mumbai Convocation & Patient Gallery</p>
+                  </div>
                 </div>
               </div>
             </div>

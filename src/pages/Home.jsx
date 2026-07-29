@@ -7,6 +7,12 @@ import carouselTreatment from '../assets/carousel_treatment.png';
 import carouselAligner from '../assets/carousel_aligner.png';
 import carouselCleaning from '../assets/carousel_cleaning.jpg';
 
+import clinicOperatory from '../assets/clinic_operatory_chairs.png';
+import clinicReceptionDesk from '../assets/clinic_reception_desk.png';
+import clinicReceptionWall from '../assets/clinic_reception_wall.png';
+import clinicFrontDoor from '../assets/clinic_front_door.png';
+import clinicBuildingExterior from '../assets/clinic_building_exterior.png';
+
 import hero3dScanner from '../assets/hero_3d_scanner.png';
 import heroTeethCleaning from '../assets/hero_teeth_cleaning.png';
 import heroDigitalAligners from '../assets/hero_digital_aligners.png';
@@ -92,49 +98,49 @@ function RevealOnScroll({ children, delayClass = '' }) {
 
 const slides = [
   {
-    image: hero3dScanner,
-    tag: "GUMANMAL JI'S",
+    image: clinicReceptionWall,
+    tag: "REG. NO.: A11108 • GOLD MEDALIST SURGEON",
     title: "Shree Radhe",
     titlePrimary: "Dental Hospital",
-    description: "Creating Beautiful Smiles Everyday! Experience world-class 3D intraoral scanning and advanced digital dentistry with compassionate care.",
+    description: "Dr. Rinku S. Kumawat (Gold Medalist, BDS MUHS Mumbai, Ex. CA Govt Hospital). \"स्वस्थ दांत, सुंदर मुस्कान — हमारी पहचान\"",
     primaryBtn: { text: "Book Appointment", to: "/booking" },
-    secondaryBtn: { text: "Call Now", href: "tel:+916378556857", isPhone: true },
+    secondaryBtn: { text: "Call +91 6378556857", href: "tel:+916378556857", isPhone: true },
   },
   {
-    image: heroTeethCleaning,
-    tag: "GENTLE CARE",
-    title: "Comfortable & Painless",
-    titlePrimary: "Teeth Cleaning",
-    description: "Enjoy a refreshing, high-gloss clean and preventative oral hygiene checkup with gentle, expert care in a calming environment.",
-    primaryBtn: { text: "Book Appointment", to: "/booking" },
+    image: clinicOperatory,
+    tag: "STATE-OF-THE-ART OPERATORY",
+    title: "Modern Dual Chair",
+    titlePrimary: "Dental Clinic Facility",
+    description: "Fully equipped with advanced ergonomic dental suites, Sudershan air compressors, Digital X-Rays, and 100% autoclave sterilization.",
+    primaryBtn: { text: "Explore Clinic", to: "/about" },
     secondaryBtn: { text: "Our Services", to: "/services" },
   },
   {
-    image: heroDigitalAligners,
-    tag: "ADVANCED ORTHODONTICS",
-    title: "3D Digital Clear",
-    titlePrimary: "Invisible Aligners",
-    description: "Transform your smile with computer-designed 3D invisible aligners. Straighten your teeth discreetly, comfortably, and efficiently.",
-    primaryBtn: { text: "Book Appointment", to: "/booking" },
+    image: clinicReceptionDesk,
+    tag: "RECEPTION & RECEPTION GALLERY",
+    title: "Welcoming & Hygienic",
+    titlePrimary: "Reception Desk",
+    description: "Warm reception area featuring Dr. Rinku Kumawat's academic excellence awards, convenient digital payment options, and patient comfort.",
+    primaryBtn: { text: "Book Consultation", to: "/booking" },
+    secondaryBtn: { text: "View Services", to: "/services" },
+  },
+  {
+    image: clinicFrontDoor,
+    tag: "ORTHODONTICS & ALIGNERS",
+    title: "Teeth Alignment &",
+    titlePrimary: "Braces / Aligners",
+    description: "Transform crooked or gapped teeth into a confident smile with ceramic braces, metal braces, and invisible clear aligners.",
+    primaryBtn: { text: "Book Consultation", to: "/booking" },
     secondaryBtn: { text: "Explore Aligners", to: "/services" },
   },
   {
-    image: heroClinicInterior,
-    tag: "WORLD-CLASS INFRASTRUCTURE",
-    title: "State-of-the-Art",
-    titlePrimary: "Modern Clinic Facility",
-    description: "Step into our ultra-hygienic, fully equipped modern dental suites designed for maximum safety, relaxation, and patient comfort.",
-    primaryBtn: { text: "About Us", to: "/about" },
-    secondaryBtn: { text: "Book Appointment", to: "/booking" },
-  },
-  {
-    image: heroEndoTreatment,
-    tag: "MICROSCOPIC ENDODONTICS",
-    title: "Precision Microscopic",
-    titlePrimary: "Root Canal Therapy",
-    description: "Save natural teeth with advanced digital endodontic tools, rubber-dam isolation, and painless microscopic precision treatments.",
+    image: clinicBuildingExterior,
+    tag: "CONVENIENT LOCATION",
+    title: "Shivdhara Hospital",
+    titlePrimary: "Ke Samne, Chomu",
+    description: "Easily accessible clinic location on Jaipur Road, Chomu with ample parking and modern multi-story healthcare infrastructure.",
     primaryBtn: { text: "Book Appointment", to: "/booking" },
-    secondaryBtn: { text: "View Services", to: "/services" },
+    secondaryBtn: { text: "View All 13 Services", to: "/services" },
   }
 ];
 
@@ -473,12 +479,15 @@ export default function Home() {
               <RevealOnScroll delayClass="delay-200">
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-4 pt-12">
-                    <div className="rounded-card overflow-hidden h-64 shadow-md border border-outline-variant/10">
+                    <div className="rounded-card overflow-hidden h-64 shadow-md border border-outline-variant/10 group relative">
                       <img
-                        className="w-full h-full object-cover"
-                        alt="High tech dental operatory"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCi5TpYnRHDtYYGXAzLzPkumn5f1aHFY2ZKMESs7SZQNRdWfZkmr46qJTmnRXy9D2nUXROq-q6k3awMzobwCh0WJX434Q05-Nf7qiEmgMPKMCtC2lAxF13iaPIR4b8x3-ZoI7QoYlEwFlTxTGLvCDOIJ8hkVK0rXZk30-NyDC5HxPva70Sc95IhRbPHJMdJXymaHQtsEowuEveoRBBCCIHB3XeFBpeNxWfEszNKGagQP9if7gkvl8IElwkwaUL0i0jncpdHxm9eHhI"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        alt="Shree Radhe Dual Dental Chair Operatory"
+                        src={clinicOperatory}
                       />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-3 text-white">
+                        <span className="text-xs font-bold">Dual Dental Operatory</span>
+                      </div>
                     </div>
                     <div className="bg-primary p-4 sm:p-8 rounded-card text-on-primary shadow-lg">
                       <p className="font-headline-md text-headline-md font-bold text-on-primary">24/7</p>
@@ -497,12 +506,16 @@ export default function Home() {
                       </div>
                       <p className="font-caption text-caption text-on-primary-container/85">Google Rating</p>
                     </div>
-                    <div className="rounded-card overflow-hidden h-80 shadow-md border border-outline-variant/10">
+                    <div className="rounded-card overflow-hidden h-80 shadow-md border border-outline-variant/10 group relative">
                       <img
-                        className="w-full h-full object-cover"
-                        alt="Dental clinic waiting area"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuANaUx_Th12slr_fA9cdQ6Pleow6hfgjy9eKbTXR-V_nl_jdZK3eYrB3ofB1RzUXeIP83YxJUogIbIUFueFWnGniyXrtU9g3_Re7VaElH6aS_Maee1POyrPyi_EoVjjfhB_HNwSrRizVDFPtaNt5KCHncM88sv2DEjjmtnp9503cb0Pw0tkhWeGioSQxZQctIPQi8c0a0suqMJvMtop5vnNyxFATDb8dDCYF8TuIXnWcYXBB3GpjK-g8fbByX4Q-RLqZ5M2QhlYteo"
+                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                        alt="Shree Radhe Reception & Honors Wall"
+                        src={clinicReceptionWall}
                       />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end p-3 text-white">
+                        <span className="text-xs font-bold text-primary">Clinic Reception</span>
+                        <span className="text-[11px] text-white/90">Gold Medalist Awards & Wall of Fame</span>
+                      </div>
                     </div>
                   </div>
                 </div>
