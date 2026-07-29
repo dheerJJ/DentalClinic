@@ -662,6 +662,107 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Clinic Location & Interactive Google Map */}
+      <section className="py-section-gap bg-surface-container-low border-t border-outline-variant/10">
+        <div className="max-w-container-max mx-auto px-5 md:px-margin-desktop">
+          <RevealOnScroll>
+            <div className="text-center mb-12">
+              <span className="inline-flex items-center gap-2 px-3.5 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold uppercase tracking-wider mb-3">
+                <span className="material-symbols-outlined text-sm">location_on</span>
+                Visit Our Clinic
+              </span>
+              <h2 className="font-headline-lg text-headline-lg text-on-surface mb-4">Find Us on Google Maps</h2>
+              <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
+                Conveniently located on Jaipur Road, Chomu (opposite Shivdhara Hospital). Ample parking and easy accessibility.
+              </p>
+            </div>
+          </RevealOnScroll>
+
+          <RevealOnScroll delayClass="delay-200">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-stretch">
+              {/* Info Box */}
+              <div className="lg:col-span-5 bg-surface-container p-8 rounded-card border border-outline-variant/20 shadow-md flex flex-col justify-between">
+                <div>
+                  <h3 className="font-headline-md text-xl font-bold text-on-surface mb-6 flex items-center gap-2">
+                    <span className="material-symbols-outlined text-primary text-[28px]">local_hospital</span>
+                    Shree Radhe Dental Hospital
+                  </h3>
+
+                  <div className="space-y-6">
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0 mt-1">
+                        <span className="material-symbols-outlined text-[20px]">location_on</span>
+                      </div>
+                      <div>
+                        <p className="font-label-md text-label-md text-on-surface font-semibold">Address</p>
+                        <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                          Shivdhara Hospital ke samne, Jaipur Road, Chomu, Rajasthan
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0 mt-1">
+                        <span className="material-symbols-outlined text-[20px]">schedule</span>
+                      </div>
+                      <div>
+                        <p className="font-label-md text-label-md text-on-surface font-semibold">Clinic Hours</p>
+                        <p className="font-body-md text-body-md text-on-surface-variant">
+                          Mon - Sun: 9:00 AM - 7:00 PM
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0 mt-1">
+                        <span className="material-symbols-outlined text-[20px]">call</span>
+                      </div>
+                      <div>
+                        <p className="font-label-md text-label-md text-on-surface font-semibold">Contact &amp; Hotline</p>
+                        <a href="tel:+916378556857" className="font-body-md text-body-md text-primary font-bold hover:underline">
+                          +91 6378556857
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="pt-8 mt-8 border-t border-outline-variant/10 flex flex-wrap gap-3">
+                  <a
+                    href="https://maps.google.com/?q=Shree+Radhe+Dental+Hospital+Chomu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 bg-primary text-on-primary px-5 py-3 rounded-xl font-label-md text-xs font-bold text-center hover:bg-primary-container transition-all flex items-center justify-center gap-2"
+                  >
+                    <span className="material-symbols-outlined text-sm">directions</span> Get Directions
+                  </a>
+                  <a
+                    href="tel:+916378556857"
+                    className="bg-surface-container-high text-primary border border-primary/20 px-5 py-3 rounded-xl font-label-md text-xs font-bold text-center hover:bg-primary/10 transition-all flex items-center justify-center gap-2"
+                  >
+                    <span className="material-symbols-outlined text-sm">call</span> Call Clinic
+                  </a>
+                </div>
+              </div>
+
+              {/* Embedded Interactive Map Frame */}
+              <div className="lg:col-span-7 rounded-card overflow-hidden border border-outline-variant/20 shadow-md min-h-[400px]">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227416.63962153962!2d75.5600758097137!3d27.049593095029415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396dabf4db377813%3A0xe44f21390f8c9153!2sShree%20Radhe%20Dental%20Hospital!5e0!3m2!1sen!2sin!4v1785292420378!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0, minHeight: '400px' }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  title="Shree Radhe Dental Hospital Google Map Location"
+                ></iframe>
+              </div>
+            </div>
+          </RevealOnScroll>
+        </div>
+      </section>
+
       {/* Appointment CTA Banner */}
       <section className="py-section-gap bg-background">
         <div className="max-w-container-max mx-auto px-5 md:px-margin-desktop">
