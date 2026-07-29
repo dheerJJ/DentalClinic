@@ -12,6 +12,7 @@ import clinicReceptionDesk from '../assets/clinic_reception_desk.png';
 import clinicReceptionWall from '../assets/clinic_reception_wall.png';
 import clinicFrontDoor from '../assets/clinic_front_door.png';
 import clinicBuildingExterior from '../assets/clinic_building_exterior.png';
+import drRinkuConvocation from '../assets/dr_rinku_convocation_award.jpg';
 
 import hero3dScanner from '../assets/hero_3d_scanner.png';
 import heroTeethCleaning from '../assets/hero_teeth_cleaning.png';
@@ -506,17 +507,21 @@ export default function Home() {
                       </div>
                       <p className="font-caption text-caption text-on-primary-container/85">Google Rating</p>
                     </div>
-                    <div className="rounded-card overflow-hidden h-80 shadow-md border border-outline-variant/10 group relative">
+                    <Link to="/about" className="block rounded-card overflow-hidden h-80 shadow-md border border-outline-variant/10 group relative">
                       <img
-                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                        alt="Shree Radhe Reception & Honors Wall"
-                        src={clinicReceptionWall}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        alt="Dr. Rinku S. Kumawat Convocation & Gold Medal Award Ceremony"
+                        src={drRinkuConvocation}
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end p-3 text-white">
-                        <span className="text-xs font-bold text-primary">Clinic Reception</span>
-                        <span className="text-[11px] text-white/90">Gold Medalist Awards & Wall of Fame</span>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3.5 text-white">
+                        <div className="flex items-center gap-1 text-amber-400 text-xs font-bold mb-0.5">
+                          <span className="material-symbols-outlined text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>workspace_premium</span>
+                          Degree Convocation Ceremony
+                        </div>
+                        <span className="text-xs font-bold text-white">Dr. Rinku Kumawat (Gold Medalist)</span>
+                        <span className="text-[11px] text-white/80">MUHS Mumbai University Convocation</span>
                       </div>
-                    </div>
+                    </Link>
                   </div>
                 </div>
               </RevealOnScroll>
@@ -525,95 +530,130 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Patient Testimonials */}
+      {/* Patient Testimonials / Google Reviews */}
       <section className="py-section-gap bg-surface-container-low border-t border-outline-variant/10">
         <div className="max-w-container-max mx-auto px-5 md:px-margin-desktop">
           <RevealOnScroll>
             <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary rounded-full font-label-md text-label-md mb-4">
+                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                  <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                  <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+                  <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+                </svg>
+                Google Patient Reviews
+              </div>
               <h2 className="font-headline-lg text-headline-lg text-on-surface mb-4">What Our Patients Say</h2>
               <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
-                Real stories from individuals who transformed their smiles and confidence with us.
+                Real feedback from Google Reviews from patients who received treatment at Shree Radhe Dental Hospital.
               </p>
             </div>
           </RevealOnScroll>
 
           <RevealOnScroll delayClass="delay-200">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-              {/* Testimonial 1 */}
-              <div className="bg-surface-container p-8 rounded-card shadow-sm border border-outline-variant/20">
-                <div className="flex gap-1 text-primary mb-4">
-                  {[1, 2, 3, 4, 5].map((s) => (
-                    <span key={s} className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>
-                      star
+              {/* Review 1: Sumitra Kumawat */}
+              <div className="bg-surface-container p-8 rounded-card shadow-sm border border-outline-variant/20 flex flex-col justify-between hover:shadow-md transition-shadow">
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex gap-1 text-amber-400">
+                      {[1, 2, 3, 4, 5].map((s) => (
+                        <span key={s} className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>
+                          star
+                        </span>
+                      ))}
+                    </div>
+                    <span className="text-xs font-medium text-on-surface-variant/70 bg-surface-container-high px-2.5 py-0.5 rounded-full">
+                      6 months ago
                     </span>
-                  ))}
-                </div>
-                <p className="font-body-md text-body-md italic text-on-surface mb-8">
-                  "I had a fear of dentists for years, but the team here made me feel so comfortable. The dental implant procedure was completely painless!"
-                </p>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full overflow-hidden border border-outline-variant/20">
-                    <img
-                      className="w-full h-full object-cover"
-                      alt="Dr. Arjun Mehta"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCymrEGsuIedMH8cMcwi7GuD7Ghtr8Rr43usO3Hy-QYtJO8eshdhjBibYgkqkV5Dxjs2zReTrKcJevGOulW-hD67kYW3Ci3A4hQ-vJmvpqmZxe-OdnQr3SQRHFvsLnKgcaj0ukN2CkHfbExjsoUdaRJMdpn4rsYGYhyEDMr9H1guXf3eJRAtoFUUHdLM6SUqxVbdsSmSMYpJkrgyR1jfrlg0ysLL_wSKvAJdjsrlw0qj2DRA4xL7TB8IUsgtwYrsjtucy7rqMgZN2U"
-                    />
                   </div>
-                  <div>
-                    <p className="font-label-md text-label-md text-on-surface">Dr. Arjun Mehta</p>
-                    <p className="font-caption text-caption text-on-surface-variant">Oral and Maxillofacial Surgeon</p>
+                  <p className="font-body-md text-body-md text-on-surface mb-8 leading-relaxed">
+                    "Dr Rinku is extremely professional dentist with gentleness,gives you painless procedures, clear explanations, overcoming dental anxiety, excellence skill in handling complex issues like extractions or implants, making patients feel comfortable with state-of-the-art care and a welcoming environment, even recommending them reasonable cost."
+                  </p>
+                </div>
+                <div className="flex items-center justify-between pt-4 border-t border-outline-variant/10">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-teal-700 text-white flex items-center justify-center font-bold text-sm shadow-sm">
+                      SK
+                    </div>
+                    <div>
+                      <p className="font-label-md text-label-md text-on-surface font-semibold">Sumitra Kumawat</p>
+                      <p className="font-caption text-caption text-on-surface-variant/80">2 reviews</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-1 text-rose-500 text-xs font-medium">
+                    <span className="material-symbols-outlined text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>favorite</span> 2
                   </div>
                 </div>
               </div>
-              {/* Testimonial 2 */}
-              <div className="bg-surface-container p-8 rounded-card shadow-sm border border-outline-variant/20">
-                <div className="flex gap-1 text-primary mb-4">
-                  {[1, 2, 3, 4, 5].map((s) => (
-                    <span key={s} className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>
-                      star
+
+              {/* Review 2: Tejpal Barala */}
+              <div className="bg-surface-container p-8 rounded-card shadow-sm border border-outline-variant/20 flex flex-col justify-between hover:shadow-md transition-shadow">
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex gap-1 text-amber-400">
+                      {[1, 2, 3, 4, 5].map((s) => (
+                        <span key={s} className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>
+                          star
+                        </span>
+                      ))}
+                    </div>
+                    <span className="text-xs font-medium text-on-surface-variant/70 bg-surface-container-high px-2.5 py-0.5 rounded-full">
+                      2 months ago
                     </span>
-                  ))}
-                </div>
-                <p className="font-body-md text-body-md italic text-on-surface mb-8">
-                  "Best cleaning experience ever. The hygienists are incredibly gentle and the technology they use is absolutely state-of-the-art."
-                </p>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full overflow-hidden border border-outline-variant/20">
-                    <img
-                      className="w-full h-full object-cover"
-                      alt="Dr. Priya Sharma"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5ZZTNLYpa_wWrveZxcgqznw_dxqVSRcQz_mCb4MzvE4-55QgdFDbLcSuuxLSn5LhaRr5zBUd8A36IwJLi2zeVC9ixEOYWcDtOWeMPR8eo7gfyYhjQf7ZeSUdS5ioAwtN8W9oKDIuD7Iau9f7vQeK9aefLsxecfME2ExpTPJplqbjZTu_ROxbPs6t4wSWyofRzN72MmMzJXDupjGPhsn4DroaqmT0m6wk0HarpBs9bH2LWTMDIMQWOdip671NhHj3ubPK6EN_fpIk"
-                    />
                   </div>
-                  <div>
-                    <p className="font-label-md text-label-md text-on-surface">Dr. Priya Sharma</p>
-                    <p className="font-caption text-caption text-on-surface-variant">Periodontists</p>
+                  <p className="font-body-md text-body-md text-on-surface mb-8 leading-relaxed">
+                    "best experience at shree radhe dental hospital doctor rinku did amazing job of my teeth cleaning and polishing thank you maim👍"
+                  </p>
+                </div>
+                <div className="flex items-center justify-between pt-4 border-t border-outline-variant/10">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-indigo-700 text-white flex items-center justify-center font-bold text-sm shadow-sm">
+                      TB
+                    </div>
+                    <div>
+                      <p className="font-label-md text-label-md text-on-surface font-semibold">Tejpal Barala</p>
+                      <p className="font-caption text-caption text-on-surface-variant/80">3 reviews</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-1 text-rose-500 text-xs font-medium">
+                    <span className="material-symbols-outlined text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>favorite</span> 1
                   </div>
                 </div>
               </div>
-              {/* Testimonial 3 */}
-              <div className="bg-surface-container p-8 rounded-card shadow-sm border border-outline-variant/20">
-                <div className="flex gap-1 text-primary mb-4">
-                  {[1, 2, 3, 4, 5].map((s) => (
-                    <span key={s} className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>
-                      star
+
+              {/* Review 3: Vikram Saini */}
+              <div className="bg-surface-container p-8 rounded-card shadow-sm border border-outline-variant/20 flex flex-col justify-between hover:shadow-md transition-shadow">
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex gap-1 text-amber-400">
+                      {[1, 2, 3, 4, 5].map((s) => (
+                        <span key={s} className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>
+                          star
+                        </span>
+                      ))}
+                    </div>
+                    <span className="text-xs font-medium text-on-surface-variant/70 bg-surface-container-high px-2.5 py-0.5 rounded-full">
+                      a month ago
                     </span>
-                  ))}
-                </div>
-                <p className="font-body-md text-body-md italic text-on-surface mb-8">
-                  "Shree Radhe fixed my alignment issues in just 6 months. I've never been more confident about my smile. Highly recommend to everyone!"
-                </p>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full overflow-hidden border border-outline-variant/20">
-                    <img
-                      className="w-full h-full object-cover"
-                      alt="Dr. Rajesh Iyer"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpT1UPWHO9BbQt3oTlkJWCTzyTZFgX5w37fj7g3AQK78XUg8NmvTq43YPb3WG-KZ-4cbxerA1IKi8fgS2kiMQQ6Jo_aDPdNo0a1QSkZz0CCqaSBqzt-PEO8BopKWc28GPNdVswD04JCbfaY0xCJ4FIeyndxPSXDszBMoB_4OCFDMeh9tVR-OmlDKI3-dlDLlSQbKOkIeqgahkt9ECnXNYl_RhVcgVn2kail7BvSp46iYlel4GGCOZQXuRT7c5Fmwx5DIX4f5fN_mI"
-                    />
                   </div>
-                  <div>
-                    <p className="font-label-md text-label-md text-on-surface">Dr. Rajesh Iyer</p>
-                    <p className="font-caption text-caption text-on-surface-variant">Orthodontists</p>
+                  <p className="font-body-md text-body-md text-on-surface mb-8 leading-relaxed">
+                    "Best dental hospital chomu shree radhe dental hospital chomu best treatment best doctor thanks for supporting health"
+                  </p>
+                </div>
+                <div className="flex items-center justify-between pt-4 border-t border-outline-variant/10">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-emerald-700 text-white flex items-center justify-center font-bold text-sm shadow-sm">
+                      VS
+                    </div>
+                    <div>
+                      <p className="font-label-md text-label-md text-on-surface font-semibold">Vikram Saini</p>
+                      <p className="font-caption text-caption text-on-surface-variant/80">2 reviews · 1 photo</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-1 text-rose-500 text-xs font-medium">
+                    <span className="material-symbols-outlined text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>favorite</span> 1
                   </div>
                 </div>
               </div>

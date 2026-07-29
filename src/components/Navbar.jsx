@@ -62,7 +62,7 @@ export default function Navbar() {
               Reg. No.: A11108
             </span>
             <span className="hidden md:inline font-semibold">
-              Dr. Rinku S. Kumawat <span className="opacity-90 font-normal">(Gold Medalist | Dental Surgeon | BDS MUHS Mumbai)</span>
+              Dr. Rinku S. Kumawat <span className="opacity-90 font-normal">(Dental Surgeon)</span>
             </span>
           </div>
           <div className="flex items-center gap-4">

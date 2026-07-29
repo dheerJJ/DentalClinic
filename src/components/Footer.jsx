@@ -12,7 +12,7 @@ export default function Footer() {
           </div>
           <div>
             <p className="font-bold text-on-surface text-sm">Dr. Rinku S. Kumawat</p>
-            <p className="text-xs text-primary font-semibold">Gold Medalist | Dental Surgeon | BDS (MUHS Mumbai)</p>
+            <p className="text-xs text-primary font-semibold">Dental Surgeon</p>
             <p className="text-[11px] text-on-surface-variant/70 mt-0.5">Ex. CA Government Hospital • Reg. No.: A11108</p>
           </div>
           <p className="font-body-md text-body-md text-on-surface-variant/75 leading-relaxed">

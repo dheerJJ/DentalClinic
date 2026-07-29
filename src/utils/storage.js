@@ -5,7 +5,7 @@ const DEFAULT_SETTINGS = {
   hindiName: 'श्री राधे डेंटल हॉस्पिटल',
   tagline: 'स्वस्थ दांत, सुंदर मुस्कान — हमारी पहचान',
   doctorName: 'Dr. Rinku S. Kumawat',
-  qualifications: 'Gold Medalist | Dental Surgeon | BDS | MUHS Mumbai | Ex. CA Government Hospital',
+  qualifications: 'Dental Surgeon | Ex. CA Government Hospital',
   regNo: 'A11108',
   contactEmail: 'srdhsmile@gmail.com',
   contactPhone: '+91-6378556857',

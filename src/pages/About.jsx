@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import drRinku from '../assets/Dr-RINKU-S-KUMAWAT.png';
+import drRinkuConvocation from '../assets/dr_rinku_convocation_award.jpg';
 import clinicOperatory from '../assets/clinic_operatory_chairs.png';
 import clinicReceptionDesk from '../assets/clinic_reception_desk.png';
 import clinicReceptionWall from '../assets/clinic_reception_wall.png';
@@ -8,6 +9,8 @@ import clinicFrontDoor from '../assets/clinic_front_door.png';
 import clinicBuildingExterior from '../assets/clinic_building_exterior.png';
 
 export default function About() {
+  const [isImageOpen, setIsImageOpen] = useState(false);
+
   useEffect(() => {
     document.title = 'About Us | Shree Radhe Dental Hospital';
   }, []);
@@ -117,6 +120,55 @@ export default function About() {
                   "आपकी मुस्कान ही हमारी पहचान है — Technology gives us precision, but empathy gives our patients comfort."
                 </blockquote>
                 <p className="mt-2 text-sm font-semibold tracking-[0.05em] text-primary">— Dr. RINKU S. KUMAWAT (Gold Medalist)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── 2.5 CONVOCATION & GOLD MEDAL DEGREE SPOTLIGHT ─────────────────── */}
+      <section className="py-12 bg-surface-container-lowest border-y border-outline-variant/10">
+        <div className="max-w-container-max mx-auto px-5 md:px-margin-desktop">
+          <div className="bg-surface-container p-6 md:p-10 rounded-3xl border border-outline-variant/20 shadow-xl overflow-hidden">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              <div className="lg:col-span-7 space-y-4">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-amber-500/10 text-amber-500 rounded-full text-xs font-bold uppercase tracking-wider">
+                  <span className="material-symbols-outlined text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>workspace_premium</span>
+                  Degree & Gold Medal Convocation
+                </div>
+                <h3 className="font-headline-lg text-2xl md:text-3xl font-semibold text-on-background">
+                  Academic Excellence & Convocation Ceremony
+                </h3>
+                <p className="text-sm md:text-base leading-relaxed text-on-surface-variant">
+                  Official convocation ceremony image showing <strong>Dr. Rinku S. Kumawat</strong> receiving her degree certificate and Academic Gold Medal honor for highest scholastic achievement at Maharashtra University of Health Sciences (MUHS), Mumbai.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                  <div className="p-4 rounded-2xl bg-surface-container-high border border-outline-variant/10">
+                    <p className="text-xs text-primary font-bold uppercase tracking-wider mb-1">Degree Awarded</p>
+                    <p className="text-sm font-semibold text-on-surface">Bachelor of Dental Surgery (BDS)</p>
+                  </div>
+                  <div className="p-4 rounded-2xl bg-surface-container-high border border-outline-variant/10">
+                    <p className="text-xs text-amber-500 font-bold uppercase tracking-wider mb-1">Honor Distinction</p>
+                    <p className="text-sm font-semibold text-on-surface">Gold Medalist & Academic Excellence</p>
+                  </div>
+                </div>
+              </div>
+              <div className="lg:col-span-5 relative group cursor-pointer" onClick={() => setIsImageOpen(true)}>
+                <div className="rounded-2xl overflow-hidden shadow-2xl border-2 border-primary/30 aspect-[4/3] md:aspect-[16/11] relative">
+                  <img
+                    src={drRinkuConvocation}
+                    alt="Dr. Rinku S. Kumawat receiving Convocation Degree & Gold Medal Award"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-90 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4 text-white">
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs font-semibold text-amber-300">Convocation Ceremony Photo</span>
+                      <span className="text-xs bg-primary/80 px-2.5 py-1 rounded-full flex items-center gap-1 font-medium">
+                        <span className="material-symbols-outlined text-sm">zoom_in</span> View Full Image
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -304,6 +356,32 @@ export default function About() {
           </Link>
         </div>
       </section>
+      {/* ─── IMAGE LIGHTBOX MODAL ────────────────────── */}
+      {isImageOpen && (
+        <div
+          className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4"
+          onClick={() => setIsImageOpen(false)}
+        >
+          <div className="relative max-w-5xl w-full max-h-[90vh] flex flex-col items-center">
+            <button
+              onClick={() => setIsImageOpen(false)}
+              className="absolute -top-12 right-0 text-white bg-white/20 hover:bg-white/40 p-2 rounded-full transition-colors flex items-center justify-center"
+              aria-label="Close modal"
+            >
+              <span className="material-symbols-outlined text-2xl">close</span>
+            </button>
+            <img
+              src={drRinkuConvocation}
+              alt="Dr. Rinku S. Kumawat Convocation Award Ceremony"
+              className="max-h-[80vh] w-auto object-contain rounded-2xl border border-white/20 shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            />
+            <div className="mt-4 text-center text-white/90 font-medium text-sm">
+              Dr. Rinku S. Kumawat — Convocation & Academic Gold Medal Award Ceremony (BDS, MUHS Mumbai)
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
