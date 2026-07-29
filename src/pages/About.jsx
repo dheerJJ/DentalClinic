@@ -35,7 +35,7 @@ export default function About() {
                 REG. NO.: A11108
               </span>
               <span className="inline-block px-3.5 py-1 rounded-full bg-white/10 text-on-background text-xs font-semibold">
-                GOLD MEDALIST SURGEON
+                DENTAL SURGEON
               </span>
             </div>
             <h1 className="font-headline-xl text-3xl sm:text-4xl lg:text-5xl leading-tight text-on-background mb-6">
