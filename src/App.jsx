@@ -50,7 +50,7 @@ function Layout() {
         {/* Floating Call Button */}
         <a
           href="tel:+916378556857"
-          className="flex items-center justify-center w-14 h-14 bg-primary hover:bg-primary-container text-on-primary rounded-full shadow-lg transition-all duration-300 transform hover:scale-110 active:scale-95 group relative"
+          className="flex items-center justify-center w-14 h-14 bg-[#25D366] hover:bg-[#20ba5a] text-white rounded-full shadow-lg transition-all duration-300 transform hover:scale-110 active:scale-95 animate-whatsapp group relative"
           aria-label="Call Clinic"
           title="Call +91 6378556857"
         >
