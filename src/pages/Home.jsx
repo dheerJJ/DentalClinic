@@ -100,7 +100,7 @@ function RevealOnScroll({ children, delayClass = '' }) {
 const slides = [
   {
     image: clinicReceptionWall,
-    tag: "REG. NO.: A11108 • DENTAL SURGEON",
+    tag: "REG. NO.: A11108 • GOLD MEDALIST DENTAL SURGEON",
     title: "Shree Radhe",
     titlePrimary: "Dental Hospital",
     description: "Dr. Rinku S. Kumawat (Gold Medalist, BDS MUHS Nashik). \"स्वस्थ दांत, सुंदर मुस्कान — हमारी पहचान\"",
